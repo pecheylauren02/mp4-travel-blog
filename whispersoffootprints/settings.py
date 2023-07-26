@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pecheylaure-mp4travelbl-dq0x3q646cj.ws-eu102.gitpod.io', 'whispers-of-footprints.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['whispers-of-footprints.herokuapp.com', 'localhost', 'whispers-of-footprints-7b4c45535e12.herokuapp.com',]
 
 
 # Application definition
