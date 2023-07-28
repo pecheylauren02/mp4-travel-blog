@@ -93,7 +93,7 @@ This is the documentation for a my travel blog website: Whispers of Footprints! 
 
 #### Project Purpose
 
-This travel blog was planned and developed using principles of User Experience (UX) design, which include the five planes of Strategy, Scope, Structure, Skeleton, and Surface. Using these principles, the aim was to create a fun, easy-to-use, responsive, and engaging travel that entertains users who are interested in travelling, blogging and sharing their travel experiences, and reading about others. 
+The Whispers of Footprints travel blog was planned and developed using principles of User Experience (UX) design, which include the five planes of Strategy, Scope, Structure, Skeleton, and Surface. Using these principles, the aim was to create a fun, easy-to-use, responsive, and engaging travel that entertains users who are interested in travelling, blogging and sharing their travel experiences, and reading about others. The name "Whispers of Footprints" is an original name which was inspired by the idea of users writing (hence whispers) about their travels (or footprints).
 
 #### Client Goals
 
@@ -113,10 +113,27 @@ Whispers of Footprints was built as a milestone project for my Diploma in Fullst
 
 #### User Goals 
 
-The Whispering Footprints travel blog aims to ensure that users can:
+The Whispers of Footprints aims to ensure that users can:
 
 - Learn more about their personalities and how they would handle certain life scenarios
 - Be entertained and engaged while taking a short quiz
 - Navigate easily through the questions without interruptions
 - See eye-catching results after answering all of the questions
 - Retake the quiz as many times as they want to, to explore different results
+
+### Research 
+
+#### Market Review 
+
+Before designing the website, I reviewed other travel blog websites (see below), in order to get a feel of how they presented themselves, which content and features they offered, and the design choices they made in terms of colour palette. I also reviewed what appeared to work well for the user and what needed improvements (see Key Takeaways). 
+
+[Site Name](link) | 
+
+#### Key Takeaways
+
+- The website should be eye-catching, with clear, enticing images to make users excited about reading and writing their own blogs
+- The website should be clean, simple, and easy to navigate
+- The sign up and login form should be quick and easy to fill in, to keep the user engaged and interested
+- The home page should not be too busy, as this results in poor user experience and navigation
+- The Write Your Own Section should be easy to use, to encourage users to write and publish their blogs
+- There should be navigation buttons on each page, so the user does not need to use the back button on the web browser
