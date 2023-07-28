@@ -33,7 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['whispers-of-footprints.herokuapp.com', 'localhost',
-                 'whispers-of-footprints-7b4c45535e12.herokuapp.com',]
+                 'whispers-of-footprints-7b4c45535e12.herokuapp.com', 
+                 '8000-pecheylaure-mp4travelbl-dq0x3q646cj.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -44,11 +45,24 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'travelblog',
 ]
+
+SITE_ID = 1
+
+# To redirect user back to homepage after login/logout
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
