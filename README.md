@@ -93,3 +93,30 @@ This is the documentation for a my travel blog website: Whispers of Footprints! 
 
 #### Project Purpose
 
+This travel blog was planned and developed using principles of User Experience (UX) design, which include the five planes of Strategy, Scope, Structure, Skeleton, and Surface. Using these principles, the aim was to create a fun, easy-to-use, responsive, and engaging travel that entertains users who are interested in travelling, blogging and sharing their travel experiences, and reading about others. 
+
+#### Client Goals
+
+Whispers of Footprints was built as a milestone project for my Diploma in Fullstack Software Development with [Code Institute](https://codeinstitute.net/global/full-stack-software-development-diploma/). It is an interactive travel blog designed to entertain users of all ages and backgrounds who want to read about different places in the world they can travel to, as well as write about their own. Despite this being built for educational reasons, it was still treated as a real-world application for potential clients interested in blogging about their travels in a fun, engaging way. Thus, this client's goals would be:
+
+- Allowing users to read interesting travel blogs, which they can interact with through comments and likes
+- Allowing users to write their own blogs about their travels, which they can post and share with their friends
+- Ensuring easy, quick sign-up and login options so users can gain access to blog content quickly and do not lose interest
+- Ensuring that the site is easy-to-navigate between posts
+- Ensuring that the users can easily write about and publish their own blog posts
+
+#### Target Audience
+
+- This travel blog is designed for users of any background or age, but will most likely gain more interest from those interested in travelling, learning more about other countries, or writing about their travels. 
+- It is also likely to draw in users who are currently planning their own trip, or have already been on an interesting trip and would like to write about it and share it with their friends or family. 
+- The organisation of the website makes it easy for adults, teenagers and even children to read and write about their travel experiences. Furthermore, they will be able to filter through the posts by category, which improves user experience and prevents users from having to find a post tied to their specific interests. 
+
+#### User Goals 
+
+The Whispering Footprints travel blog aims to ensure that users can:
+
+- Learn more about their personalities and how they would handle certain life scenarios
+- Be entertained and engaged while taking a short quiz
+- Navigate easily through the questions without interruptions
+- See eye-catching results after answering all of the questions
+- Retake the quiz as many times as they want to, to explore different results
