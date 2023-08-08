@@ -1,4 +1,10 @@
 from django.contrib import admin
 from .models import Post
-# Post model
-admin.site.register(Post)
+from django_summernote.admin import SummernoteModelAdmin
+
+
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
+
+    # We want to use summer note for the blog fields
+    summernote_fields = ('content')
