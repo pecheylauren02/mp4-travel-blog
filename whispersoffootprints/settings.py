@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['whispers-of-footprints.herokuapp.com', 'localhost',
                  'whispers-of-footprints-7b4c45535e12.herokuapp.com',
-                 '8000-pecheylaure-mp4travelbl-dq0x3q646cj.ws-eu102.gitpod.io']
+                 '8000-pecheylaure-mp4travelbl-dq0x3q646cj.ws-us104.gitpod.io']
 
 
 # Application definition
@@ -63,7 +63,6 @@ LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -151,7 +150,11 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
