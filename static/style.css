@@ -98,22 +98,24 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: turquoise;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    text-decoration: none;
+    color: white;
 }
 
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
+    color: turquoise;
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: white;
 }
 
 .btn-signup {
