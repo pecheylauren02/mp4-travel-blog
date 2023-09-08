@@ -2,6 +2,8 @@ body {
     background-color: black;
 }
 
+/* Navbar Styling */
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -10,7 +12,7 @@ body {
 }
 
 .blue-font {
-    color:#00CCCC;
+    color: #00CCCC;
 }
 
 .thin {
@@ -22,16 +24,20 @@ body {
 }
 
 .dark-bg {
-    background-color:#445261;
+    background-color: #445261;
 }
 
 .main-bg {
-    background-color:#445261;
+    background-color: #445261;
 }
 
 /* .nav-design {
     background-color: red;
 }  */
+
+/* Carousel section */
+
+/* Blog area */
 
 .card {
     border: none;

@@ -34,19 +34,19 @@
                 <ul class="nav nav-pills nav-justified me-auto bg-dark nav-design">
                     <!-- navbar-nav me-auto mb-2 mb-lg-0  -->
                     <li class="nav-item">
-                        <a class="nav-link active text-dark bg-info" aria-current="page"
+                        <a class="nav-link active text-white bg-info font-weight-bold border rounded" aria-current="page"
                             href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link bg-dark text-info" href="#">Logout</a>
+                        <a class="nav-link bg-dark text-info font-weight-bold border rounded float-right" href="#">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link bg-dark text-info" href="#">Register</a>
+                        <a class="nav-link bg-dark text-info font-weight-bold border-bottom rounded" href="#">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-dark text-info" href="#">Login</a>
+                        <a class="nav-link bg-dark text-info font-weight-bold border-bottom rounded" href="#">Login</a>
                     </li>
                     {% endif %}
                 </ul>
