@@ -37,6 +37,11 @@ body {
 
 /* Carousel section */
 
+/* Make the custom-img class more specific */
+.carousel-inner .custom-img {
+    height: 60vh; /* Set the height to 30% of the viewport height */
+}
+
 /* Blog area */
 
 .card {
