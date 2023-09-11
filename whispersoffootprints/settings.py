@@ -59,7 +59,6 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # To redirect user back to homepage after login/logout
-LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
