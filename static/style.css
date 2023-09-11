@@ -38,7 +38,8 @@ body {
 /* Carousel section */
 
 .carousel-inner .custom-img {
-    max-height: 60vh;
+    height: 80vh;
+    max-height: 80vh;
     object-fit: cover;
 }
 
