@@ -37,9 +37,17 @@ body {
 
 /* Carousel section */
 
-/* Make the custom-img class more specific */
 .carousel-inner .custom-img {
-    height: 60vh; /* Set the height to 30% of the viewport height */
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+
+#carouselExampleControls .carousel-caption {
+    position: absolute !important;
+    margin: 0 auto;
+    text-align: center !important;
+    background-color: rgba(35, 187, 187, 0.5) !important; 
 }
 
 /* Blog area */
