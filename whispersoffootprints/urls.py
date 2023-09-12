@@ -24,12 +24,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('travelblog.urls'), name='blog_urls'),
+    # path('blog/', include('travelblog.urls'), name='blog_urls'),
     path('accounts/', include('allauth.urls')),
-    # path('', home_view, name='home'),
-    # #path('', include('allauth.urls')),
-    # path('', views.home, name='home'), 
 ]
 
 # To display images on carousel
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

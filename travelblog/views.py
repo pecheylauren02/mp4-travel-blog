@@ -30,7 +30,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-      
+    
         # Send all of this to our render method
         return render(
             request,
