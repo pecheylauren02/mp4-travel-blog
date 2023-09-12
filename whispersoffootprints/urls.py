@@ -22,13 +22,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # path('', home_view, name='home'),
-    # #path('', include('allauth.urls')),
-    path('accounts/', include('allauth.urls')),
-    # path('', views.home, name='home'),
     path('summernote/', include('django_summernote.urls')),
     path('', include('travelblog.urls'), name='blog_urls'),
+    path('accounts/', include('allauth.urls')),
+    # path('', home_view, name='home'),
+    # #path('', include('allauth.urls')),
+    # path('', views.home, name='home'), 
 ]
 
 # To display images on carousel

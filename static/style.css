@@ -51,6 +51,22 @@ body {
     background-color: rgba(35, 187, 187, 0.5) !important; 
 }
 
+/* Login, Sign up, Logout */
+
+.login-bg {
+
+    /* Set the background image URL */
+    background: url('../static/ocean_village.png') center/cover no-repeat;
+    height: 600px;
+    width: 100%;
+    background-color: #f0f0f0; /* Fallback background color */
+    object-fit: cover;
+}
+
+.login-form {
+    background-color: rgba(35, 187, 187, 0.8) !important; 
+}
+
 /* Blog area */
 
 .card {
