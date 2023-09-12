@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar Styling */
@@ -54,17 +56,25 @@ body {
 /* Login, Sign up, Logout */
 
 .login-bg {
-
-    /* Set the background image URL */
     background: url('../static/ocean_village.png') center/cover no-repeat;
-    height: 600px;
+    /* height: 600px; */
+    min-height: 100vh;
     width: 100%;
-    background-color: #f0f0f0; /* Fallback background color */
+    background-color: rgba(240, 240, 240, 0.8);/* Fallback background color */
+    background-size: cover;
     object-fit: cover;
 }
 
 .login-form {
     background-color: rgba(35, 187, 187, 0.8) !important; 
+}
+
+.signup-bg {
+    background: url('../static/temple_trees.jpg') center/cover no-repeat;
+    height: 600px;
+    width: 100%;
+    background-color: #f0f0f0; /* Fallback background color */
+    object-fit: cover;
 }
 
 /* Blog area */
