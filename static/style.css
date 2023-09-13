@@ -33,9 +33,9 @@ body {
     background-color: #445261;
 }
 
-/* .nav-design {
-    background-color: red;
-}  */
+.nav-design {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
 
 /* Carousel section */
 
