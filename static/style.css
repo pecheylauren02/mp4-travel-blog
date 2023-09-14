@@ -57,51 +57,16 @@ body {
 
 /* About Us Heading */
 
-.about-heading {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 60px;
-    color: #080808;
-    -webkit-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-    margin-bottom: 10px;
-}
-
-.about-heading em {
-    font-style: normal;
-    font-weight: 600;
-}
-
-.four .about-heading {
-    text-align: center;
-    padding-bottom: 0.5em;
-}
-
-.four .about-heading:before {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 1px;
-    content: "";
-    left: 50%;
-    margin-left: -30px;
-    background-color: #777;
-}
-
 /* Flip Card */
 .flip-card {
     perspective: 1000px;
-    width: 90%;
-    /* Adjust as needed for card width */
+    max-width: 90%;
     height: 500px;
+    /* Adjust as needed for card width */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    margin: 30px;
 }
 
 .card-front,
@@ -129,26 +94,6 @@ body {
 
 .flip-button {
     margin-top: 15px;
-}
-
-.rounded-circle {
-    border-radius: 50% !important;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: top;
-}
-
-.sub-info {
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    color: #004975;
-}
-
-.display-30 {
-    font-size: 0.9rem;
 }
 
 /* Login, Sign up, Logout */
