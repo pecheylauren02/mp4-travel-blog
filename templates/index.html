@@ -17,9 +17,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button>
-                <button type="button" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -34,9 +33,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <!-- <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button> -->
-                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -51,9 +49,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button>
-                <button type="button" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -68,9 +65,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button>
-                <button type="button" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -85,9 +81,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button>
-                <button type="button" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -102,9 +97,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg m-3">Write your own <i
-                        class="fas fa-pen-fancy"></i></button>
-                <button type="button" class="lead btn btn-info btn-lg">Explore our blogs <i
+                <button type="button" id="showAboutUsButton" class="lead btn btn-info btn-lg">Learn About Us</button>
+                <button type="button" id="exploreBlogsButton" class="lead btn btn-info btn-lg">Explore Our Blogs <i
                         class="fas fa-globe-europe"></i></button>
             </div>
         </div>
@@ -345,8 +339,18 @@
         </nav>
         {% endif %}
     </div>
+    <div class="row">
+        <!-- Add the new buttons here -->
+        <div class="col-12 mt-3">
+            <div class="text-center">
+                <!-- Button to go back to Carousel section -->
+                <button id="goToCarouselButton" class="btn btn-primary">Go to Carousel</button>
+                <!-- Button to go back to About Us section -->
+                <button id="goToAboutUsButton" class="btn btn-primary">Go to About Us</button>
+            </div>
+        </div>
+    </div>
 </div>
-
 <script>
     $(document).ready(function () {
         $('.carousel').carousel({
@@ -355,20 +359,62 @@
 
         // Add click event listener to the "Explore our blogs" button
         $('#exploreBlogsButton').click(function () {
-            // Toggle the visibility of About Us and Blog Entries sections
-            $('#aboutUsSection').toggle();
-            $('#blogEntriesSection').toggle();
+            // Hide the carousel and About Us sections, and show the Blog Entries section
+            $('#carouselExampleControls').hide();
+            $('#aboutUsSection').hide();
+            $('#blogEntriesSection').show();
         });
-    });
 
-    const flipButtons = document.querySelectorAll('.flip-button');
+        // Add click event listener to the "Show About Us" button
+        $('#showAboutUsButton').click(function () {
+            // Show the About Us section and hide the carousel and Blog Entries sections
+            $('#carouselExampleControls').hide();
+            $('#aboutUsSection').show();
+            $('#blogEntriesSection').hide();
+        });
 
-    flipButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const card = this.closest('.flip-card');
-            card.classList.toggle('flipped');
+        // Add click event listener to the "Show About Us" button
+        $('#goToCarouselButton').click(function () {
+            // Show the About Us section and hide the carousel and Blog Entries sections
+            $('#carouselExampleControls').show();
+            $('#aboutUsSection').hide();
+            $('#blogEntriesSection').hide();
+        });
+
+        $('#goToAboutUsButton').click(function () {
+            // Show the About Us section and hide the carousel and Blog Entries sections
+            $('#carouselExampleControls').hide();
+            $('#aboutUsSection').show();
+            $('#blogEntriesSection').hide();
+        });
+
+        // // Scroll to sections
+        // document.getElementById('goToCarouselButton').addEventListener('click', function () {
+        //     // Scroll to the Carousel section
+        //     document.getElementById('carouselSection').scrollIntoView({
+        //         behavior: 'smooth'
+        //     });
+        // });
+
+        // document.getElementById('goToAboutUsButton').addEventListener('click', function () {
+        //     // Scroll to the About Us section
+        //     document.getElementById('aboutUsSection').scrollIntoView({
+        //         behavior: 'smooth'
+        //     });
+        //});
+
+        const flipButtons = document.querySelectorAll('.flip-button');
+
+        flipButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const card = this.closest('.flip-card');
+                card.classList.toggle('flipped');
+            });
         });
     });
 </script>
+
+
+
 
 {%endblock%}
