@@ -125,7 +125,7 @@
 
 
 <h1 class="impressive-heading">About Us</h1>
-<div class="container container-fluid">
+<div class="container container-fluid bg-dark">
    
     <div class="row align-items-center">
         
@@ -137,7 +137,7 @@
                         style="max-width: 100%;" src="{% static 'girl_blogging.jpg' %}"
                         alt="A girl blogging">
                     <div
-                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark">
+                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark flip-bg">
                         <h4 class="card-title">
                             Blog Your Travels
                         </h4>
@@ -171,7 +171,7 @@
                         style="max-width: 100%;" src="{% static 'helping_others.png' %}"
                         alt="A girl blogging">
                     <div
-                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark">
+                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark flip-bg">
                         <h4 class="card-title">
                             Help Others
                         </h4>
@@ -204,7 +204,7 @@
     </div>
 </div>
 
-<div class="container container-fluid">
+<div class="container container-fluid bg-dark">
     <div class="row align-items-center">
 
         <!-- First card in its own row -->
@@ -215,7 +215,7 @@
                         style="max-width: 100%;" src="{% static 'travel_group.png' %}"
                         alt="A girl blogging">
                     <div
-                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark">
+                        class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark flip-bg">
                         <h4 class="card-title">
                             Build A Travel Community
                         </h4>
@@ -241,14 +241,14 @@
     </div>
     <!-- Second card in its own row -->
     <div class="col-md-6">
-        <div class="card flip-card text-white">
+        <div class="card flip-card text-white about">
             <div class="card-front">
                 <img class="img-fluid border rounded-circle flip-button img-square"
                     style="max-width: 100%;" src="{% static 'photographer.png' %}"
                     alt="A girl blogging">
-                <div class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark">
+                <div class="carousel-caption border border-white rounded-lg font-weight-bold text-center bg-dark flip-bg">
                     <h4 class="card-title">
-                        Improve Your Photography and Writing Skills!
+                        Improve Your Skills!
                     </h4>
                     <button class="btn-lg btn-info flip-button border border-white rounded">Learn more!</button>
                 </div>
@@ -277,61 +277,57 @@
 </div>
 </div>
 
-<!-- Flip Card End -->
-
-
+<h1 class="impressive-heading">Explore Our Blogs</h1>
 <div class="container-fluid">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
+  <div class="row">
+    <div class="col-12 mt-3 left">
+      <div class="row">
+        {% for post in post_list %}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="image-container">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.featured_image.url }}">
                 {% endif %}
-                {% endfor %}
-
+                <div class="image-flash">
+                  <p class="author">Author: {{ post.author }}</p>
+                </div>
+              </div>
+              <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.excerpt }}</p>
+              </a>
+              <hr />
+              <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                {{ post.number_of_likes }}</p>
             </div>
+          </div>
         </div>
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% if forloop.counter|divisibleby:3 %}
+      </div>
+      <div class="row">
+        {% endif %}
+        {% endfor %}
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if is_paginated %}
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+      {% endif %}
+      {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
 </div>
 
 <script>

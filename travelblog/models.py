@@ -32,7 +32,7 @@ class Post(models.Model):
     # default isnt helpful at all
     def __str__(self):
         return self.title
-  
+ 
     # Helper method to return the total number of likes on a post
     def number_of_likes(self):
         return self.likes.count()

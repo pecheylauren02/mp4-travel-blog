@@ -106,6 +106,10 @@ body {
     margin-top: 15px;
 }
 
+.flip-bg {
+    opacity: 0.9;
+}
+
 /* Login, Sign up, Logout */
 
 .login-bg {
