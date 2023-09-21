@@ -70,8 +70,24 @@ body {
     object-fit: cover;
 } */
 
-.about {
+#about_one {
     background: url('../static/people_canoe.png') no-repeat center center;
+    object-fit: cover;
+}
+
+#about_two {
+    background: url('../static/ocean_village.png') no-repeat center center;
+    object-fit: cover;
+}
+
+#about_three {
+    background: url('../static/night_purple.png') no-repeat center center;
+    object-fit: cover;
+
+}
+
+#about_four {
+    background: url('../static/mountain_bg.jpg') no-repeat center center;
     object-fit: cover;
 }
 
