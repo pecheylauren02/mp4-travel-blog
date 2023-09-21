@@ -106,10 +106,12 @@ body {
 
 .card-back {
     transform: rotateY(180deg);
+    transition: transform 0.3s ease;
 }
 
 .flip-card.flipped {
     transform: rotateY(180deg);
+    transition: transform 0.3s ease;
     z-index: 1;
     /* Raise the flipped card to be above other cards */
     /* Add margin between flip cards */
@@ -121,8 +123,8 @@ body {
 }
 
 .flip-bg {
-    opacity: 0.9;
-}
+    margin-top: 100px;
+} 
 
 /* Login, Sign up, Logout */
 
