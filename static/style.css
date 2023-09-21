@@ -65,8 +65,14 @@ body {
 
 /* About Us Section */
 
+/* #aboutUsSection {
+    background: url('../static/people_canoe.png') no-repeat center center;
+    object-fit: cover;
+} */
+
 .about {
-    background: linear-gradient(to left, #007BFF, #00FFC8);
+    background: url('../static/people_canoe.png') no-repeat center center;
+    object-fit: cover;
 }
 
 /* About Us Heading */
@@ -153,6 +159,12 @@ body {
 }
 
 /* Blog area */
+
+#blogEntriesSection {
+    background: url('../static/mountain_lake.png') no-repeat center center;
+    object-fit: cover;
+    height: 100%;
+}
 
 .card {
     border: none;

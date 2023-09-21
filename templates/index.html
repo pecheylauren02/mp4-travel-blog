@@ -17,9 +17,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -33,9 +32,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -49,9 +47,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -65,9 +62,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -81,9 +77,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -97,9 +92,8 @@
                     <br>
                     DREAM.
                 </h1>
-                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton">Learn About Us</button>
-                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton">Explore Our Blogs <i
-                        class="fas fa-globe-europe"></i></button>
+                <button type="button" class="lead btn btn-info btn-lg showAboutUsButton m-1">Learn About Us</button>
+                <button type="button" class="lead btn btn-info btn-lg exploreBlogsButton m-1">Explore Our Blogs</button>
             </div>
         </div>
     </div>
@@ -300,9 +294,9 @@
     </div>
     <div class="text-center">
         <!-- Button to go back to Carousel section -->
-        <button class="btn-lg btn-info border border-white rounded goToCarouselButton">Return Home</button>
+        <button class="btn-lg btn-info border border-white rounded goToCarouselButton m-3">Return Home</button>
         <!-- Button to go back to About Us section -->
-        <button class="btn-lg btn-info border border-white rounded exploreBlogsButton">Explore Our Blogs</button>
+        <button class="btn-lg btn-info border border-white rounded exploreBlogsButton m-3">Explore Our Blogs</button>
     </div>
 </div>
 
@@ -316,7 +310,7 @@
                 <div class="row">
                     {% for post in post_list %}
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card border border-dark bg-white m-1">
                             <div class="card-body">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
@@ -365,14 +359,15 @@
     <div class="row">
         <!-- Add the new buttons here -->
         <div class="col-12 mt-3">
-            <div class="text-center">
+            <div class="d-flex justify-content-center align-items-center">
                 <!-- Button to go back to Carousel section -->
-                <button class="btn-lg btn-info border border-white rounded goToCarouselButton">Return Home</button>
+                <button class="btn-lg btn-info border border-white rounded goToCarouselButton m-3">Return Home</button>
                 <!-- Button to go back to About Us section -->
-                <button class="btn-lg btn-info border border-white rounded goToAboutUsButton">See About Us</button>
+                <button class="btn-lg btn-info border border-white rounded goToAboutUsButton m-3">See About Us</button>
             </div>
         </div>
     </div>
+    
 </div>
 <script>
     $(document).ready(function () {
