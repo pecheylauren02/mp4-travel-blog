@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 
-<div class="masthead">
+<div class="masthead blog-bg">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container blog-bg">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
@@ -71,8 +71,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3">
-            <h3>Comments:</h3>
+        <div class="col-md-8 card mb-4 mt-3 border border border-white rounded-lg bg-info bg-opacity-50 text-center p-3 login-form">
+
+            <!-- <div class="container login-bg d-flex justify-content-center align-items-center vh-100 font-weight-bold w-100"> -->
+            <h3 class="display-5 display-md-4 mt-3">Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
