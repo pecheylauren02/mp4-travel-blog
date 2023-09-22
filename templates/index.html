@@ -333,7 +333,7 @@
                 <div class="row">
                     {% for post in post_list %}
                     <div class="col-md-4">
-                        <div class="card border border-dark bg-white m-1">
+                        <div class="card bg-white m-1">
                             <div class="card-body">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
@@ -342,7 +342,7 @@
                                     {% else %}
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                     {% endif %}
-                                    <div class="image-flash">
+                                    <div class="image-flash bg-info">
                                         <p class="author">Author: {{ post.author }}</p>
                                     </div>
                                 </div>
@@ -410,7 +410,7 @@
         // Add click event listener to the "Show About Us" button
         $('.showAboutUsButton').click(function () {
             // Show the About Us section and hide the carousel and Blog Entries sections
-            $('#carouselExampleControls').show();
+            $('#carouselExampleControls').hide();
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
         });
@@ -429,21 +429,6 @@
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
         });
-
-        // // Scroll to sections
-        // document.getElementById('goToCarouselButton').addEventListener('click', function () {
-        //     // Scroll to the Carousel section
-        //     document.getElementById('carouselSection').scrollIntoView({
-        //         behavior: 'smooth'
-        //     });
-        // });
-
-        // document.getElementById('goToAboutUsButton').addEventListener('click', function () {
-        //     // Scroll to the About Us section
-        //     document.getElementById('aboutUsSection').scrollIntoView({
-        //         behavior: 'smooth'
-        //     });
-        //});
 
         const flipButtons = document.querySelectorAll('.flip-button');
 

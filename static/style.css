@@ -186,7 +186,6 @@ body {
 
 .card {
     border: none;
-    background-color: transparent;
 }
 
 .image-container {
@@ -198,7 +197,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: white;
 }
 
 .author {
@@ -217,8 +216,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    background-color: white;
+    color: black;
     position: relative;
 }
 
@@ -234,7 +233,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: white;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -249,7 +248,7 @@ body {
 .post-link:hover,
 .page-link {
     text-decoration: none;
-    color: white;
+    color: #007BFF;
 }
 
 .post-title {
@@ -289,6 +288,7 @@ body {
     color: #E84610;
     border: none;
     background: transparent;
+    font-size: 24px;
 }
 
 .btn-like:hover,
