@@ -51,6 +51,6 @@ class Comment(models.Model):
     # Put in ascending order because we want this to be a conversation
     class Meta:
         ordering = ['created_on']
-    
+  
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
