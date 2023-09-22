@@ -25,9 +25,9 @@
     </div>
 </div>
 
-<div class="container blog-bg">
+<div class="container">
     <div class="row">
-        <div class="col card mb-4 mt-3 left top">
+        <div class="col card mb-4 mt-3 p-5 left top border border border-white rounded-lg bg-info bg-opacity-50 text-center p-3 login-form">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -72,8 +72,6 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3 border border border-white rounded-lg bg-info bg-opacity-50 text-center p-3 login-form">
-
-            <!-- <div class="container login-bg d-flex justify-content-center align-items-center vh-100 font-weight-bold w-100"> -->
             <h3 class="display-5 display-md-4 mt-3">Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -94,11 +92,10 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4 mt-3">
+        <div class="col-md-4 card mb-4 mt-3 border border-white rounded-lg bg-info bg-opacity-50 text-center p-3 login-form">
             <div class="card-body">
-                <!-- For later -->
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success border border-white rounded-lg" role="alert">
                     Your comment is awaiting approval
                 </div>
                 {% else %}
