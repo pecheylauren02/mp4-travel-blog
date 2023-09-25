@@ -164,6 +164,32 @@ Before designing the website, I reviewed other travel blog websites (see below),
 - The Write Your Own Section should be easy to use, to encourage users to write and publish their blogs
 - There should be navigation buttons on each page, so the user does not need to use the back button on the web browser
 
+## Security Features
+
+### User Authentication
+
+* Django Allauth is a popular authentication and authorization library for Django, which provides a set of features for managing user authentication, registration, and account management.
+
+### Login Decorator
+
+* This ensures that only authenticated users can access the views available, and require authentication with the login_required decorator.
+
+### CSRF Protection
+
+* Django provides built-in protection against Cross-Site Request Forgery (CSRF) attacks. CSRF tokens are generated for each user session, and they are required to submit forms or perform state-changing actions. When a user logs out, the session and associated CSRF token are invalidated, making it difficult for an attacker to forge a valid request using a copied URL.
+
+### Form Validation
+
+* The booking_create view validates form input using the BookingForm class. It checks for various validation errors, such as the number of guests, check-in and check-out dates, overlapping bookings, and additional validations for cave exploration tickets and kayak rentals.
+
+## Admin approval
+
+* Users cannot comment without approval from the admin site.
+
+### Custom error pages
+
+* 404 Error Page, provides user with a button the redirect to home page.
+* 500 Error Page, provides user with a button the redirect to home page.
 
 ## Technologies Used
 
