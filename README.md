@@ -16,6 +16,9 @@ This is the documentation for a my travel blog website: Whispers of Footprints! 
         - [Project Purpose](#project-purpose)
         - [Client Goals](#client-goals)
         - [Target Audience](#target-audience)
+        - [First Time User](#first-time-user)
+        - [Registered User](#registered-user)
+        - [Admin User](#admin-user)
         - [User Goals](#user-goals)
     - [Research](#research)
         - [Market Review](#market-review)
@@ -111,6 +114,29 @@ Whispers of Footprints was built as a milestone project for my Diploma in Fullst
 - It is also likely to draw in users who are currently planning their own trip, or have already been on an interesting trip and would like to write about it and share it with their friends or family. 
 - The organisation of the website makes it easy for adults, teenagers and even children to read and write about their travel experiences. Furthermore, they will be able to filter through the posts by category, which improves user experience and prevents users from having to find a post tied to their specific interests. 
 
+#### First Time User
+
+- Simple and intuitive website navigation, such as buttons and hamburger menus for easy exploration and discovery.
+- Engaging visuals showcasing the beauty of different travel destinations.
+- Informative content providing an About Us page which explains what the website offers.
+- User-friendly forms with clear validation messages to ensure accurate input.
+- Simple, easy registration process.
+
+#### Registered User
+
+- Seamless login process with a secure and personalized user account.
+- Browsing blog posts for different destinations.
+- Ability to like and comment on existing blog posts on the site.
+
+#### Admin User
+
+- Secure and separate login portal for admin users with appropriate access control.
+- Access to an admin dashboard for managing cabins, amenities, and bookings.
+- Ability to add, edit, or delete blog posts.
+- Ability to approve or reject comments by users on blog posts.
+- Ability to delete user accounts, providing the necessary control for managing user data and accounts.
+- Ability to add or delete users.
+
 #### User Goals 
 
 The Whispers of Footprints aims to ensure that users can:
@@ -127,7 +153,7 @@ The Whispers of Footprints aims to ensure that users can:
 
 Before designing the website, I reviewed other travel blog websites (see below), in order to get a feel of how they presented themselves, which content and features they offered, and the design choices they made in terms of colour palette. I also reviewed what appeared to work well for the user and what needed improvements (see Key Takeaways). 
 
-[Site Name](link) | 
+[Tailor Made Africa](https://www.tailormadeafrica.com/zimbabwe-safari/) | [Blog - Girlhood](https://www.girlmuseum.org/blog/?gclid=CjwKCAjw38SoBhB6EiwA8EQVLsQBKJg7uJXhmfld-1l3npYUCCWmactZPm8XVrFkZD3Wsl9YSyDh1hoCQ7IQAvD_BwE) | [Unspoken Smiles](https://unspokensmiles.org/blog/?gclid=CjwKCAjw38SoBhB6EiwA8EQVLiZ09Nrzm0248zLECMAWj3Xv5ZxIESixT3N_3SWB1dXJJbEhBctUchoCxdgQAvD_BwE) | [WordPress](https://wordpress.org/) | [Medium](https://medium.com/)
 
 #### Key Takeaways
 
@@ -137,3 +163,125 @@ Before designing the website, I reviewed other travel blog websites (see below),
 - The home page should not be too busy, as this results in poor user experience and navigation
 - The Write Your Own Section should be easy to use, to encourage users to write and publish their blogs
 - There should be navigation buttons on each page, so the user does not need to use the back button on the web browser
+
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Databases Used
+
+* [ElephantSQL](https://www.elephantsql.com/) - Postgres database
+* [Cloudinary](https://cloudinary.com/) - Online static file storage
+
+### Frameworks Used
+
+* [Django](https://www.djangoproject.com/) - Python framework
+* [Bootstrap 4.6.1](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS framework
+
+### Programs Used
+
+* [Github](https://github.com/) - Storing the code online
+* [Gitpod](https://www.gitpod.io/) - To write the code.
+* [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
+* [Google Fonts](https://fonts.google.com/) - Import main font the website.
+* [Figma](https://www.figma.com/) - Used to create wireframes and schemes
+* [Craiyon](https://www.craiyon.com/) - Generate AI images of cabins and logo based on my words descriptions
+* [Am I Responsive](https://ui.dev/amiresponsive) - To show the website image on a range of devices.
+* [Git](https://git-scm.com/) - Version control
+* [Favicon Generator](https://realfavicongenerator.net/) - Used to create a favicon
+* [JSHint](https://jshint.com/) - Used to validate JavaScript
+* [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate HTML
+* [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
+* [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
+* [Colormind](http://colormind.io/) - Color Scheme
+
+## Deployment and Local Developement
+
+Live deployment can be found on this [View Whispers of Footprints live website here](LINK)
+
+### Local Developement
+
+#### How to Fork
+
+1. Log in (or Sign Up) to Github.
+2. Go to the repository for this project [Whispers of Footprints](https://github.com/pecheylauren02/mp4-travel-blog).
+3. Click the fork button in the top right corner to fork the repository.
+
+#### How to Clone
+
+1. Log in(or Sign Up) to Github.
+2. Go to repository for this project [Whispers of Footprints](https://github.com/pecheylauren02/mp4-travel-blog).
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above).
+6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
+7. Install the packages from the requirements.txt file - run Command pip3 install -r requirements.txt
+
+### ElephantSQL Database
+
+[Whispers of Footprints](https://github.com/pecheylauren02/mp4-travel-blog) is using [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database.
+
+1. Click Create New Instance to start a new database.
+2. Provide a name (this is commonly the name of the project: tribe).
+3. Select the Tiny Turtle (Free) plan.
+4. You can leave the Tags blank.
+5. Select the Region and Data Center closest to you.
+6. Once created, click on the new database name, where you can view the database URL and Password.
+
+### Cloudinary
+
+[Whispers of Footprints](https://github.com/pecheylauren02/mp4-travel-blog) is using [Cloudinary](https://cloudinary.com/):
+1. For Primary interest, you can choose Programmable Media for image and video API.
+2. Optional: edit your assigned cloud name to something more memorable.
+3. On your Cloudinary Dashboard, you can copy your API Environment Variable.
+4. Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key.
+
+### Heroku Deployment
+
+* Log into [Heroku](https://www.heroku.com/) account or create an account.
+* Click the "New" button at the top right corner and select "Create New App".
+* Enter a unique application name
+* Select your region
+* Click "Create App"
+
+#### Prepare enviroment and settings.py
+* In your GitPod workspace, create an env.py file in the main directory.
+* Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+* Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
+* Comment out the default database configuration.
+* Save all files and make migrations.
+* Add the Cloudinary URL to env.py
+* Add the Cloudinary libraries to the list of installed apps.
+* Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+* Link the file to the templates directory in Heroku.
+* Change the templates directory to TEMPLATES_DIR
+* Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+
+#### Add the following Config Vars in Heroku:
+
+* SECRET_KEY - This can be any Django random secret key
+* CLOUDINARY_URL - Insert your own Cloudinary API key
+* PORT = 8000
+* DISABLE_COLLECTSTATIC = 1 - this is temporary, and can be removed for the final deployment
+* DATABASE_URL - Insert your own ElephantSQL database URL here
+
+#### Additional requirements
+
+Heroku needs two additional files to deploy properly
+* requirements.txt
+* Procfile
+
+#### Final Deployment
+
+1. Make sure DEBUG = False in the settings.py
+2. Go to the deploy tab on Heroku and connect to GitHub, then to the required repository.
+3. Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the GitHub repository is updated.
+4. Click 'Open App' to view the deployed live site.
+
+Site is now live
