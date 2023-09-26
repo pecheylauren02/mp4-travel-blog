@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
-from .forms import CommentForm
+from .models import Post, Comment
+from .forms import CommentForm, CommentUpdateForm  # Add CommentUpdateForm 101
+from django.contrib.auth.decorators import login_required # Add login_required 101
+from django.utils.decorators import method_decorator # Add decorators 101
 
 
 class PostList(generic.ListView):
@@ -83,3 +85,35 @@ class PostLike(View):
 # The get will get the comments form with the body prefilled, and once the user clicks on save, there would need a post function which posts the forms
 # Only by registered and admin user, use login required mixin for classes, and decorator for functions
 # If a user is editting the view, it should be the comment that the user comments
+
+# Update view: 101
+
+
+@method_decorator(login_required, name='dispatch')
+class CommentUpdate(View):
+    def get(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentUpdateForm(instance=comment)
+        return render(request, 'comment_update.html', {'form': form, 'comment': comment})
+
+    def post(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentUpdateForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+        return render(request, 'comment_update.html', {'form': form, 'comment': comment})
+
+
+@method_decorator(login_required, name='dispatch')
+class CommentDelete(View):
+    def get(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        return render(request, 'comment_delete.html', {'comment': comment})
+
+    def post(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        post_slug = comment.post.slug
+        comment.delete()
+        return HttpResponseRedirect(reverse('post_detail', args=[post_slug]))
+
