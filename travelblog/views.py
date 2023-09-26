@@ -116,4 +116,3 @@ class CommentDelete(View):
         post_slug = comment.post.slug
         comment.delete()
         return HttpResponseRedirect(reverse('post_detail', args=[post_slug]))
-

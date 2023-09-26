@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 {% load crispy_forms_tags %}
 
 <div class="masthead blog-bg">
@@ -35,7 +34,6 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -73,47 +71,53 @@
         </div>
     </div>
     <div class="row">
-        <div
-            class="col-md-8 card mb-4 mt-3 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
-            <h3 class="display-5 display-md-4 mt-3">Comments:</h3>
-            <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                <!-- Comment loop -->
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class="text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                        {% if user.is_authenticated and comment.user == user %}
-                        <a href="{% url 'comment_update' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
-                        <a href="{% url 'comment_delete' comment.id %}" class="btn btn-sm btn-danger">Delete</a>
-                        {% endif %}
-                    </p>
-                    {{ comment.body | linebreaks }}
+        <!-- Place "Leave a Comment" box above "Comments" box on a different row -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card mb-4 mt-3 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
+                <div class="card-body">
+                    {% if commented %}
+                    <div class="alert alert-success border border-white rounded-lg" role="alert">
+                        Your comment is awaiting approval
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success btn-lg border border-white rounded">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-        <div
-            class="col-md-4 card mb-4 mt-3 border border-white rounded-lg bg-info bg-opacity-50 text-center p-3 login-form">
-            <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success border border-white rounded-lg" role="alert">
-                    Your comment is awaiting approval
+    </div>
+    <div class="row">
+        <!-- "Comments" box on a separate row -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card mb-4 mt-3 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
+                <h3 class="display-5 display-md-4 mt-3">Comments:</h3>
+                <div class="card-body">
+                    <!-- Comment loop -->
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class="text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                            {% if user.is_authenticated and comment.user == user %}
+                            <a href="{% url 'comment_update' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{% url 'comment_delete' comment.id %}" class="btn btn-sm btn-danger">Delete</a>
+                            {% endif %}
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% endfor %}
+                    <!-- End of comment loop -->
                 </div>
-                {% else %}
-                {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
             </div>
         </div>
     </div>
