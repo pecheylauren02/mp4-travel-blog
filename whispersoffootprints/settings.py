@@ -35,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['whispers-of-footprints.herokuapp.com', 'localhost',
                  'whispers-of-footprints-7b4c45535e12.herokuapp.com',
-                 '8000-pecheylaure-mp4travelbl-dq0x3q646cj.ws-us104.gitpod.io']
+                 '8000-pecheylaure-mp4travelbl-m7hf3yn2gdx.ws-us105.gitpod.io']
 
 
 # Application definition

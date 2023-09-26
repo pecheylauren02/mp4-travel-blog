@@ -81,8 +81,12 @@
                     </div>
                     {% else %}
                     {% if user.is_authenticated %}
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="border border-white rounded-sm bg-info p-3 w-50 text-center">
+                            <h3>Leave a comment:</h3>
+                            <p class="font-weight-bold text-white">Posting as: {{ user.username }}</p>
+                        </div>
+                    </div>
                     <form method="post" style="margin-top: 1.3em;">
                         {{ comment_form | crispy }}
                         {% csrf_token %}
