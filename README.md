@@ -164,6 +164,91 @@ Before designing the website, I reviewed other travel blog websites (see below),
 - The Write Your Own Section should be easy to use, to encourage users to write and publish their blogs
 - There should be navigation buttons on each page, so the user does not need to use the back button on the web browser
 
+### User Stories
+
+As this would ideally be used in a real-world application, all user stories relate to a first-time, registered and admin user. 
+
+As a first-time user, I would like to:
+- see captivating images about different travel destinations
+- have access to the about us page, to see what the website offers and how I can use it
+- navigate easily through the site
+- sign up quickly and easily
+- access the site on any device
+
+As a registered user, I would like to:
+- login and logout quickly and easily
+- navigate between pages quickly and easily
+- read other user's blog posts to learn more about travel destinations
+- like or unlike other people's blog posts
+- comment on other people's blog posts
+
+As an admin user, I would like to:
+- Review comments from users to ensure all content it appropriate
+- Create, read, edit or delete blog posts about different travel destinations
+- Sign up and login easily with my admin password
+
+These user stories gave me a clear scope for the website and enabled me to stay on track with the project, preventing issues like scope creep at a later stage after the coding process. 
+
+### Design, Layout and Structure 
+
+The Whispers of Footprints website boasts an inviting and visually pleasing design. With the theme of travelling in mind, ocean colours of light blues and greens were used to evoke a sense of tranquility. The navigation bar features a footprints logo and easy-to-read text. Captivating photos are displayed in a bordered carousel with elegant captions to invite the user to use the site. The about section utilizes bright ocean colours which contrast with a grey background to make the text legible and clear. Social media links are presented in the footer, and the footer compliments the overall design.
+
+#### Wireframes
+
+I used [Balsamiq](https://balsamiq.com/) in the initial design phase, before the coding process. This enabled me to develop the website's structure, skeleton, layout and overall look and style. I created designs for desktop, tablet and mobile screens to ensure that responsiveness was at the forefront of the application from the beginning.
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+_Desktop Wireframes_
+
+<img src="">
+
+_iPad Wireframes_
+
+<img src="">
+
+_Phone Wireframes_
+
+</details>
+
+#### Structure and Layout
+
+The structure of this website was informed by the scope, principles of interactive design (IXD), as well as the user goals of the site. Keeping these important concepts in mind ensured that the website conformed to the user's expectations and needs. 
+
+The main site is a simple, single-page website with content displayed and hidden at different points in the site using JavaScript code. There are three main sections within the page which appear and disappear depending on which button the user clicks. These are:
+
+- The Home Page: a carousel of images and buttons to navigate the user to the about us page and blog section
+- The About Us page: explains what the website offers and why the user should use our site
+- The Blog Post page: shows the user a catalogue of blog posts that they can click on and read
+
+There is also a sign up, login and logout page for easy access and navigation. 
+
+There is also a 404 page for when a user lands on a non-existent page with a button to link back to the home page.
+
+#### Design and Colour
+
+This site was designed using a mobile-first approach, because after conducting some research (using sites like [Adobe](https://xd.adobe.com/ideas/process/ui-design/what-is-mobile-first-design/)), it appears that most users use their mobile devices over desktop or iPad screens. 
+
+- The design was influenced by travel-inspired colours like shades of blue and green which contrast well with the grey dark theme, and allow for good legibility. 
+- The welcome page has images of different travel destinations, to encourage the user to continue using the site.
+- I used the same border-radius for all buttons and options to give maintain consistency throughout the site. 
+
+![Color Scheme](LINK)
+
+#### Font
+
+My choice of font was [Cormorant Garamond Light and Cormorant Garamond Bold](https://fonts.google.com/specimen/Cormorant+Garamond?query=cor). The light font was used for all paragraphs and and the bold font was used for all headings and buttons. This font choice was imported from [Google Fonts](https://fonts.google.com/) and had a backup font of Serif. I chose this font for my website because the cursive style contributed to the supervillain theme, whilst also providing a professional, legible finish.
+
+#### Travel Carousel Images
+
+All cabin images were taken from [Pexels](https://www.pexels.com/), and were centered around the theme of travel with different destinations in mind. 
+
+#### Logo
+
+The Logo was also created using AI image generator [Craiyon](https://www.craiyon.com/).
+
 ## Security Features
 
 ### User Authentication
