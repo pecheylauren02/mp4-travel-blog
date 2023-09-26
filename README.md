@@ -249,6 +249,36 @@ All cabin images were taken from [Pexels](https://www.pexels.com/), and were cen
 
 The Logo was also created using AI image generator [Craiyon](https://www.craiyon.com/).
 
+### Data Models
+
+1. AllAuth User Model
+    * Django Allauth, the User model is the default user model provided by the Django authentication system.
+    * The User entity has a one-to-many relationship with the commenting entity. This means that a User's comment will be read by many other users, and the user can like and comment on many blogs. 
+---
+2. Blog Post Model
+    * Data model created so admin can create, read, update and delete any blog posts about travel destinations.
+    * Only Admin can change the data in the backend.
+    * Only Admin can approve or reject comments on blog posts by users. 
+---
+3. Comment and Like Model
+    * Users can comment on any blog post, and like any posts.
+    * The User entity has a one-to-many relationship with the commenting entity. This means that a User's comment will be read by many other users, and the user can like and comment on many blogs. 
+    * Only Admin can approve or reject comments on blog posts by users. 
+    * Only Admin can change the data in the backend.
+    * Users can see the comments once it has been approved by admin.
+    * Users can see how many likes are on each blog post.
+
+### User Journey 
+
+![User Journey]()
+
+### Database Scheme
+
+Entity Relationship Diagram (ERD)
+
+![DataScheme]()
+
+
 ## Security Features
 
 ### User Authentication
@@ -267,7 +297,7 @@ The Logo was also created using AI image generator [Craiyon](https://www.craiyon
 
 * The booking_create view validates form input using the BookingForm class. It checks for various validation errors, such as the number of guests, check-in and check-out dates, overlapping bookings, and additional validations for cave exploration tickets and kayak rentals.
 
-## Admin approval
+### Admin approval
 
 * Users cannot comment without approval from the admin site.
 
@@ -275,6 +305,8 @@ The Logo was also created using AI image generator [Craiyon](https://www.craiyon
 
 * 404 Error Page, provides user with a button the redirect to home page.
 * 500 Error Page, provides user with a button the redirect to home page.
+
+
 
 ## Technologies Used
 
