@@ -331,8 +331,9 @@
                 <div class="row">
                     {% for post in post_list %}
                     <div class="col-md-4">
-                        <div class="card bg-white m-1">
+                        <div class="card m-1 login-form border border-white rounded-lg" style="height:400px">
                             <div class="card-body">
+                                <div class="border border-white bg-white p-3" style="height:350px">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img class="card-img-top"
@@ -344,13 +345,15 @@
                                         <p class="author">Author: {{ post.author }}</p>
                                     </div>
                                 </div>
-                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                    <p class="card-text">{{ post.excerpt }}</p>
-                                </a>
+                                
+                                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                        <h2 class="lead font-weight-bold mt-3">{{ post.title }}</h2>
+                                        <p class="card-text">{{ post.excerpt }}</p>
+                                    </a>
                                 <hr />
                                 <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                     {{ post.number_of_likes }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
