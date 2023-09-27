@@ -4,6 +4,37 @@ body {
     padding: 0;
 }
 
+/* Sidebar */
+
+/* Floating social media sidebar on the left */
+.social-sidebar-left {
+    position: fixed;
+    top: 50%;
+    left: 0; /* Position to the left */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 999;
+    border-radius: 0 5px 5px 0;
+}
+
+.social-icon {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Add a transition for a smooth effect */
+}
+
+.social-icon:hover {
+    color: white; /* Change the color on hover if desired */
+    transform: scale(1.2); /* Scale the icon size on hover (adjust as needed) */
+}
+
+
+
 /* Navbar Styling */
 
 .brand {
