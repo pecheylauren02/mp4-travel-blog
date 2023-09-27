@@ -56,9 +56,12 @@ body {
     width: 70%;
     height: 40%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background color with transparency */
-    border: 2px solid #000; /* Optional: Customize the border style */
-    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Optional: Add a background color with transparency */
+    border: 2px solid #000;
+    /* Optional: Customize the border style */
+    border-radius: 10px;
+    /* Optional: Add border radius for rounded corners */
     padding: 20px;
     text-align: center;
 }
@@ -148,7 +151,7 @@ body {
 
 .flip-bg {
     margin-top: 100px;
-} 
+}
 
 /* Login, Sign up, Logout */
 
@@ -184,6 +187,13 @@ body {
     height: 100%;
 }
 
+.blog-bg {
+    background-image: url('/static/mountain_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .card {
     border: none;
 }
@@ -213,8 +223,7 @@ body {
     display: inline-block;
     height: 33vh;
     width: 100%;
-    border-bottom: 2px solid white;
-} 
+}
 
 .masthead-text {
     background-color: white;
@@ -241,7 +250,7 @@ body {
     z-index: 100;
 } */
 
-.post-link {
+/* .post-link {
     text-decoration: none;
     color: #000000;
 }
@@ -250,7 +259,7 @@ body {
 .page-link {
     text-decoration: none;
     color: #007BFF;
-}
+} */
 
 /* .post-title {
     margin-top: 20%;
@@ -297,9 +306,8 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 
 /* Comments section */
-

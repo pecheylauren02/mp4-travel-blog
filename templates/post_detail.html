@@ -3,122 +3,124 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0 mb-3">
-            <div class="col-lg-6 col-md-6 col-sm-12 masthead-text border border-white rounded bg-info">
-                <div class="border-white rounded-lg bg-white mx-auto text-center">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="display-5 mt-5">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="lead">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            </div>
-            <div class="d-none d-md-block col-lg-6 col-md-6 col-sm-12 border border-white rounded">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-9 col-md-12 col-sm-12 card mb-4 mt-3 left top border border-white rounded-lg bg-info bg-opacity-50 p-3 text-start">
-            <div class="card-body border border-white bg-white lead">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
-                    {{ post.content | safe }}
-                </p>
-                <div class="row">
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
+<div class="blog-bg">
+    <div class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 masthead-text border border-white rounded bg-info bg-opacity-50 text-center p-3 login-form">
+                    <div class="border-white rounded-lg bg-white text-center mt-4">
+                        <!-- Post title goes in these h1 tags -->
+                        <h1 class="display-5 p-3">{{ post.title }}</h1>
+                        <!-- Post author goes before the | the post's created date goes after -->
+                        <p class="lead p-3">{{ post.author }} | {{ post.created_on }}</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <!-- Place "Leave a Comment" box and "Comments" box side by side on large screens -->
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-            <div class="card mb-4 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
-                <div class="card-body">
-                    {% if commented %}
-                    <div class="alert alert-success border border-white rounded-lg" role="alert">
-                        Your comment is awaiting approval
-                    </div>
+                <div class="d-none d-md-block col-lg-6 col-md-6 col-sm-12 border border-white rounded">
+                    <!-- The featured image URL goes in the src attribute -->
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                     {% else %}
-                    {% if user.is_authenticated %}
-                    <h3 class="font-weight-bold text-dark">Leave a comment:</h3>
-                    <p class="text-white">Posting as: {{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-success btn-lg border border-white rounded">Submit</button>
-                    </form>
-                    {% endif %}
+                    <img src=" {{ post.featured_image.url }}" width="100%">
                     {% endif %}
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-            <!-- "Comments" box on a separate row -->
-            <div class="card mb-4 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
-                <div class="card-body">
-                    <h3 class="font-weight-bold text-dark">Comments:</h3>
-                    <!-- Comment loop -->
-                    {% for comment in comments %}
-                    <div class="border border-white rounded-sm bg-white p-1 mt-3">
-                        <p class="font-weight-bold">
-                            {{ comment.name }}
-                            <span class="text-muted font-weight-normal">
-                                {{ comment.created_on }}
-                            </span> wrote:
-                            {% if user.is_authenticated and comment.user == user %}
-                            <a href="{% url 'comment_update' comment.id %}"
-                                class="btn btn-sm btn-primary">Edit</a>
-                            <a href="{% url 'comment_delete' comment.id %}"
-                                class="btn btn-sm btn-danger">Delete</a>
-                            {% endif %}
-                        </p>
-                        {{ comment.body | linebreaks }}
+    </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div
+                class="col-lg-12 col-md-12 col-sm-12 card mb-4 mt-3 left top border border-white rounded-lg bg-info bg-opacity-50 login-form p-5 text-start">
+                <div class="card-body border border-white rounded-lg bg-white lead">
+                    <!-- The post content goes inside the card-text. -->
+                    <!-- Use the | safe filter inside the template tags -->
+                    <p class="card-text">
+                        {{ post.content | safe }}
+                    </p>
+                    <div class="row">
+                        <div class="col-1">
+                            <strong>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                            class="fas fa-heart"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                            class="far fa-heart"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <!-- The number of likes goes before the closing strong tag -->
+                                <span class="text-secondary">{{ post.number_of_likes }} </span>
+                            </strong>
+                        </div>
+                        <div class="col-1">
+                            {% with comments.count as total_comments %}
+                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                                <!-- Our total_comments variable goes before the closing strong tag -->
+                                {{ total_comments }}</strong>
+                            {% endwith %}
+                        </div>
                     </div>
-                    {% endfor %}
-                    <!-- End of comment loop -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Place "Leave a Comment" box and "Comments" box side by side on large screens -->
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+                <div class="card mb-4 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
+                    <div class="card-body">
+                        {% if commented %}
+                        <div class="alert alert-success border border-white rounded-lg" role="alert">
+                            Your comment is awaiting approval
+                        </div>
+                        {% else %}
+                        {% if user.is_authenticated %}
+                        <h3 class="font-weight-bold text-dark">Leave a comment:</h3>
+                        <p class="text-white">Posting as: {{ user.username }}</p>
+                        <form method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit"
+                                class="btn btn-success btn-lg border border-white rounded">Submit</button>
+                        </form>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+                <!-- "Comments" box on a separate row -->
+                <div class="card mb-4 border border-white rounded-lg bg-info bg-opacity-50 text-center login-form">
+                    <div class="card-body">
+                        <h3 class="font-weight-bold text-dark">Comments:</h3>
+                        <!-- Comment loop -->
+                        {% for comment in comments %}
+                        <div class="border border-white rounded-sm bg-white p-1 mt-3">
+                            <p class="font-weight-bold">
+                                {{ comment.name }}
+                                <span class="text-muted font-weight-normal">
+                                    {{ comment.created_on }}
+                                </span> wrote:
+                                {% if user.is_authenticated and comment.user == user %}
+                                <a href="{% url 'comment_update' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{% url 'comment_delete' comment.id %}" class="btn btn-sm btn-danger">Delete</a>
+                                {% endif %}
+                            </p>
+                            {{ comment.body | linebreaks }}
+                        </div>
+                        {% endfor %}
+                        <!-- End of comment loop -->
+                    </div>
                 </div>
             </div>
         </div>
