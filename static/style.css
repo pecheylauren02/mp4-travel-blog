@@ -1,8 +1,7 @@
 body {
-    background: linear-gradient(to left, #007BFF, #00FFC8);
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
-    margin-top: 20px;
 }
 
 /* Navbar Styling */
@@ -31,7 +30,7 @@ body {
 }
 
 .nav-design {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important; 
 }
 
 /* Carousel section */
@@ -68,33 +67,40 @@ body {
 
 /* About Us Section */
 
-/* #aboutUsSection {
-    background-image: url('/static/ocean_village.png');
+#aboutUsSection {
+    background-image: url('/static/red_canoe.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-} */
+    /* background: linear-gradient(to right, #00a8e8, #00c4ff, #00e4ff); */
+
+
+}
 
 #about_one {
-    background: url('../static/people_canoe.png') no-repeat center center;
-    object-fit: cover;
+    /* background: url('../static/people_canoe.png') no-repeat center center;
+    object-fit: cover; */
+    background-color: rgba(35, 187, 187, 0.5) !important;
 }
 
 #about_two {
-    background: url('../static/ocean_village.png') no-repeat center center;
-    object-fit: cover;
+    /* background: url('../static/ocean_village.png') no-repeat center center;
+    object-fit: cover; */
+    background-color: rgba(35, 187, 187, 0.5) !important;
 }
 
 #about_three {
-    background: url('../static/night_purple.png') no-repeat center center;
-    object-fit: cover;
+    /* background: url('../static/night_purple.png') no-repeat center center;
+    object-fit: cover; */
+    background-color: rgba(35, 187, 187, 0.5) !important;
 
 }
 
 #about_four {
-    background: url('../static/mountain_bg.jpg') no-repeat center center;
-    object-fit: cover;
-}
+    /* background: url('../static/mountain_bg.jpg') no-repeat center center;
+    object-fit: cover; */
+    background-color: rgba(35, 187, 187, 0.5) !important;
+} 
 
 /* About Us Heading */
 
@@ -105,6 +111,7 @@ body {
     padding: 20px;
     text-align: center;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    margin-top: 65px;
 }
 
 /* Flip Card */
