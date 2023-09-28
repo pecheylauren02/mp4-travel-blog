@@ -96,18 +96,25 @@
             <div class="row">
                 <div class="col-md-4">
                     <h3>About Us</h3>
-                    <p class="lead">Welcome to our travel blog! We're avid explorers sharing captivating tales of global adventures.
+                    <p class="lead">Welcome to our travel blog! We're avid explorers sharing captivating tales of global
+                        adventures.
                         Dive into our world of wanderlust for travel inspiration, expert tips, and destination insights.
                         Join us on a journey to uncover the planet's hidden treasures and make your own travel dreams a
                         reality.</p>
                 </div>
                 <div class="col-md-4">
                     <h3>Register Now!</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    </ul>
+                    <p class="lead">
+                        Want to explore our blogs? Click the sign-up button below!
+                    </p>
+                    <a href="{% url 'account_signup' %}"
+                        class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
+                    <h3>Already have an account?</h3>
+                    <p class="lead">
+                        Login now and you can interact with our blog posts!
+                    </p>
+                    <a href="{% url 'account_login' %}"
+                        class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
                 </div>
                 <div class="col-md-4">
                     <div class="border border-white rounded-lg text-center font-weight-bold p-3 login-form">
