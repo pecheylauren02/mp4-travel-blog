@@ -102,7 +102,16 @@
                         Join us on a journey to uncover the planet's hidden treasures and make your own travel dreams a
                         reality.</p>
                 </div>
+
                 <div class="col-md-4">
+                    {% if user.is_authenticated %}
+                    <button type="button"
+                        class="lead btn btn-primary btn-lg border border-white showAboutUsButton mb-2">About
+                        Us</button>
+                    <button type="button"
+                        class="lead btn btn-success btn-lg border border-white exploreBlogsButton mb-2">Explore Our
+                        Blogs</button>
+                    {% else %}
                     <h3>Register Now!</h3>
                     <p class="lead">
                         Want to explore our blogs? Click the sign-up button below!
@@ -115,6 +124,7 @@
                     </p>
                     <a href="{% url 'account_login' %}"
                         class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
+                    {% endif %}
                 </div>
                 <div class="col-md-4">
                     <div class="border border-white rounded-lg text-center font-weight-bold p-3 login-form">
@@ -134,7 +144,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </footer>
 
@@ -142,14 +151,6 @@
         © 2023 Copyright:
         <a class="text-white" href="https://github.com/pecheylauren02">Made by Lauren Pechey</a>
     </div>
-
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2500);
-    </script>
 
     <div class="social-sidebar-left">
         <a href="https://www.facebook.com/" target="_blank" class="social-icon border border-white rounded-lg pl-2 pr-2"
@@ -168,6 +169,14 @@
             class="social-icon border border-white rounded-lg pl-2 pr-2" style="background-color: #333333;"><i
                 class="fab fa-github"></i></a>
     </div>
+
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2500);
+    </script>
 
 </body>
 
