@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-
+from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -9,7 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Make this model more unique
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, null=True, blank=True)
     # Cascade means if one record is deleted, related records will be deleted 
     # too, e.g. if we delete user, their blog posts will be deleted too
     author = models.ForeignKey(User, on_delete=models.CASCADE,
@@ -21,6 +21,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+    # approved = models.BooleanField(default=False)
 
     # Helpers
     # Order posts based on created at
@@ -63,7 +64,7 @@ class BlogPost(models.Model):
     content = models.TextField()
     author = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.title
-

@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, BlogPost
 from .forms import CommentForm, CommentUpdateForm, BlogPostForm
-  # Add CommentUpdateForm 101
-from django.contrib.auth.decorators import login_required # Add login_required 101
-from django.utils.decorators import method_decorator # Add decorators 101
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 class PostList(generic.ListView):
     model = Post
@@ -14,7 +16,7 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-class PostDetail(View):
+class PostDetail(LoginRequiredMixin, View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -35,10 +37,12 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+   
+   
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
+        # author = request.user
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -119,17 +123,22 @@ class CommentDelete(View):
 
 
 # Create Blog model
-
-# blog/views.py
-
+@login_required
 def create_blog_post(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('blog:post_list')  # Change 'post_list' to your actual blog post list view name
+            # Create a new post, but mark it as not approved
+            new_post = form.save(commit=False)
+            new_post.approved = False  # Mark the post as not approved
+            new_post.save()
+
+            # Notify the admin about the new blog post for approval (you can customize this part)
+            messages.success(request, 'Your blog post has been submitted for approval.')
+
+            # Redirect to a success page or return a success message
+            return redirect('post_detail', slug=new_post.slug)
     else:
         form = BlogPostForm()
 
     return render(request, 'create_blog_post.html', {'form': form})
-
