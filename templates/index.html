@@ -20,6 +20,8 @@
                 <button type="button"
                     class="lead btn btn-primary btn-lg border border-white showAboutUsButton mb-2">About
                     Us</button>
+                <a href="{% url 'travelblog:create_blog_post' %}"
+                    class="lead btn btn-primary btn-lg border border-white mb-2">Write your blog</a>
                 <button type="button"
                     class="lead btn btn-success btn-lg border border-white exploreBlogsButton mb-2">Explore Our
                     Blogs</button>
@@ -334,26 +336,26 @@
                         <div class="card m-1 login-form border border-white rounded-lg" style="height:400px">
                             <div class="card-body">
                                 <div class="border border-white bg-white p-3" style="height:350px">
-                                <div class="image-container">
-                                    {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                    {% endif %}
-                                    <div class="image-flash bg-info">
-                                        <p class="author">Author: {{ post.author }}</p>
+                                    <div class="image-container">
+                                        {% if "placeholder" in post.featured_image.url %}
+                                        <img class="card-img-top"
+                                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                        {% else %}
+                                        <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                        {% endif %}
+                                        <div class="image-flash bg-info">
+                                            <p class="author">Author: {{ post.author }}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                
+
                                     <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                         <h2 class="lead font-weight-bold mt-3">{{ post.title }}</h2>
                                         <p class="card-text">{{ post.excerpt }}</p>
                                     </a>
 
-                                <hr />
-                                <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                    {{ post.number_of_likes }}</p>
+                                    <hr />
+                                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                                        {{ post.number_of_likes }}</p>
                                 </div>
                             </div>
                         </div>

@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm, CommentUpdateForm  # Add CommentUpdateForm 101
+from .forms import CommentForm, CommentUpdateForm, BlogPostForm
+  # Add CommentUpdateForm 101
 from django.contrib.auth.decorators import login_required # Add login_required 101
 from django.utils.decorators import method_decorator # Add decorators 101
-
 
 class PostList(generic.ListView):
     model = Post
@@ -116,3 +116,20 @@ class CommentDelete(View):
         post_slug = comment.post.slug
         comment.delete()
         return HttpResponseRedirect(reverse('post_detail', args=[post_slug]))
+
+
+# Create Blog model
+
+# blog/views.py
+
+def create_blog_post(request):
+    if request.method == 'POST':
+        form = BlogPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('blog:post_list')  # Change 'post_list' to your actual blog post list view name
+    else:
+        form = BlogPostForm()
+
+    return render(request, 'create_blog_post.html', {'form': form})
+
