@@ -1,7 +1,9 @@
-body {
+html, body {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /* Sidebar */
@@ -194,15 +196,22 @@ body {
 /* Login, Sign up, Logout */
 
 .login-bg {
-    background: url('../static/ocean_village.png') center/cover no-repeat;
+    /* background: url('../static/ocean_village.png') center/cover no-repeat; */
     /* height: 600px; */
-    min-height: 100vh;
+    /* min-height: 100vh;
     width: 100%;
-    background-color: rgba(240, 240, 240, 0.8);
+    background-color: rgba(240, 240, 240, 0.8); */
     /* Fallback background color */
+    /* background-size: cover;
+    object-fit: cover; */
+    background-image: url('/static/people_canoe.png');
     background-size: cover;
-    object-fit: cover;
-}
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+        height: 100vh;
+        width: 100vw; /* Added this line to ensure 100% width */
+        background-position: center;
+    }
 
 .login-form {
     background-color: rgba(35, 187, 187, 0.8) !important;
