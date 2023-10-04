@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Comment, BlogPost
-from .forms import CommentForm, CommentUpdateForm, BlogPostForm
+from .models import Post, Comment
+from .forms import CommentForm, CommentUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import messages
@@ -37,8 +37,8 @@ class PostDetail(LoginRequiredMixin, View):
                 "comment_form": CommentForm()
             },
         )
-   
-   
+  
+ 
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -96,12 +96,12 @@ class PostLike(View):
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(View):
     def get(self, request, comment_id, *args, **kwargs):
-        comment = get_object_or_404(Comment, id=comment_id)
+        comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         form = CommentUpdateForm(instance=comment)
         return render(request, 'comment_update.html', {'form': form, 'comment': comment})
 
     def post(self, request, comment_id, *args, **kwargs):
-        comment = get_object_or_404(Comment, id=comment_id)
+        comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         form = CommentUpdateForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
@@ -112,33 +112,13 @@ class CommentUpdate(View):
 @method_decorator(login_required, name='dispatch')
 class CommentDelete(View):
     def get(self, request, comment_id, *args, **kwargs):
-        comment = get_object_or_404(Comment, id=comment_id)
+        comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         return render(request, 'comment_delete.html', {'comment': comment})
 
     def post(self, request, comment_id, *args, **kwargs):
-        comment = get_object_or_404(Comment, id=comment_id)
+        comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         post_slug = comment.post.slug
         comment.delete()
         return HttpResponseRedirect(reverse('post_detail', args=[post_slug]))
 
-
-# Create Blog model
-@login_required
-def create_blog_post(request):
-    if request.method == 'POST':
-        form = BlogPostForm(request.POST)
-        if form.is_valid():
-            # Create a new post, but mark it as not approved
-            new_post = form.save(commit=False)
-            new_post.approved = False  # Mark the post as not approved
-            new_post.save()
-
-            # Notify the admin about the new blog post for approval (you can customize this part)
-            messages.success(request, 'Your blog post has been submitted for approval.')
-
-            # Redirect to a success page or return a success message
-            return redirect('post_detail', slug=new_post.slug)
-    else:
-        form = BlogPostForm()
-
-    return render(request, 'create_blog_post.html', {'form': form})
+# test comments, edit and update

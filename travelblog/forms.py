@@ -1,4 +1,4 @@
-from .models import Comment, BlogPost
+from .models import Comment
 from django import forms
 
 
@@ -16,7 +16,7 @@ class CommentUpdateForm(forms.ModelForm):
         widgets = {'body': forms.Textarea(attrs={'rows': 3})}
 
 
-class BlogPostForm(forms.ModelForm):
-    class Meta:
-        model = BlogPost
-        fields = ['title', 'content', 'author']
+# class BlogPostForm(forms.ModelForm):
+#     class Meta:
+#         model = BlogPost
+#         fields = ['title', 'content', 'author']

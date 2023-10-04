@@ -183,20 +183,6 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 2500);
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const showAboutUsButton = document.querySelector('.showAboutUsButton');
-            const exploreBlogsButton = document.querySelector('.exploreBlogsButton');
-            const body = document.body;
-
-            showAboutUsButton.addEventListener('click', function () {
-                body.classList.add('about-us-open');
-            });
-
-            exploreBlogsButton.addEventListener('click', function () {
-                body.classList.add('explore-blogs-open');
-            });
-        });
     </script>
 
 </body>
