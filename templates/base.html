@@ -107,7 +107,7 @@
                         Us</button>
                 </div>
                 <div class="col-md-4">
-                    <img src="{% static 'worldmap.jpeg' %}" alt="An outline of a worldmap" class="img-fluid mx-auto">
+                    <img src="{% static 'map.jpeg' %}" alt="An outline of a worldmap" class="img-fluid mx-auto">
                 </div>
                 <div class="col-md-4">
                     {% if user.is_authenticated %}
@@ -120,28 +120,30 @@
                     <button type="button"
                         class="lead btn btn-success btn-lg border border-white exploreBlogsButton">Explore Our
                         Blogs</button>
+
                     {% else %}
                     <h3>Register Now!</h3>
                     <p class="lead">
                         Want to explore our blogs? Click the sign-up button below!
                     </p>
                     <a href="{% url 'account_signup' %}"
-                        class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
+                        class="lead btn btn-warning btn-lg border border-white mb-4">Sign Up</a>
                     <h3>Already have an account?</h3>
                     <p class="lead">
                         Login now and you can interact with our blog posts!
                     </p>
                     <a href="{% url 'account_login' %}"
                         class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
+                        
                     {% endif %}
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="text-center p-3 text-white border-top footer-bg">
+    <div class="text-center p-3 text-white border-top footer-bg copyright">
         © 2023 Copyright:
-        <a class="text-white" href="https://github.com/pecheylauren02">Made by Lauren Pechey</a>
+        <a class="text-white" href="https://github.com/pecheylauren02" target="_blank">Made by Lauren Pechey</a>
     </div>
 
     <div class="social-sidebar-left">
