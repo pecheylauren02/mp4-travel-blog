@@ -6,6 +6,10 @@ html, body {
     width: 100%;
 }
 
+#footer-blog-form {
+    display: none;
+}
+
 /* Sidebar */
 
 /* Floating social media sidebar on the left */
