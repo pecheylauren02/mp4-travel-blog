@@ -10,6 +10,11 @@ html, body {
     background-color: #000000;
 }
 
+.home-mg {
+    margin-top: 65px;
+    border-top: white;
+}
+
 /* Sidebar */
 
 /* Floating social media sidebar on the left */
@@ -90,7 +95,7 @@ html, body {
     top: 50%;
     left: 50%;
     width: 70%;
-    height: 40%;
+    height: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8);
     /* Optional: Add a background color with transparency */
@@ -150,6 +155,8 @@ html, body {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     margin-top: 65px;
 }
+
+
 
 /* Flip Card */
 .flip-card {
