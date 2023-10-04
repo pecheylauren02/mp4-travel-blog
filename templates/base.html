@@ -37,29 +37,37 @@
         <div class="collapse navbar-collapse w-20 w-lg-100" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active m-1">
-                    <a class="nav-link nav-link text-white btn-outline-info font-weight-bold border rounded"
-                        href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    <!-- <a class="nav-link text-white btn-outline-info font-weight-bold border rounded"
+                        href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a> -->
+                    <button class="goToCarouselButton btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">Home</button>
                 </li>
-                <li class="nav-item dropdown m-1">
-                    <a class="nav-link dropdown-toggle text-white btn-outline-info font-weight-bold border rounded"
+                <li class="nav-item m-1">
+                    <button
+                        class="btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">About Us</button>
+                    <!-- <a class="nav-link dropdown-toggle text-white btn-outline-info font-weight-bold border rounded"
                         href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         Explore
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <button class="dropdown-item showAboutUsButton text-white btn-outline-info font-weight-bold border rounded bg-info">Why Use Our Website?</button>
-                        <button class="dropdown-item exploreBlogsButton text-white btn-outline-info font-weight-bold border rounded bg-info">Explore Our Blogs</button>
-                    </div>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <button class="dropdown-item showAboutUsButton text-white font-weight-bold">Why Use Our Website?</button>
+                        <button class="dropdown-item exploreBlogsButton text-white font-weight-bold">Explore Our Blogs</button>
+                    </div> -->
                 </li>
-                {% if user.is_authenticated %}
+                <li class="nav-item m-1">
+                    <button
+                        class="btn nav-link exploreBlogsButton text-white btn-outline-info font-weight-bold border rounded">Explore
+                        Our Blogs</button>
+                </li>
+                    {% if user.is_authenticated %}
                 <li class="nav-item m-1">
                     <a class="nav-link nav-link text-white btn-outline-danger font-weight-bold border rounded"
                         href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item m-1">
-                    <a class="nav-link nav-link text-white btn-outline-info font-weight-bold border rounded"
-                        href="{% url 'account_signup' %}">Register</a>
+                    <a class="nav-link nav-link text-white btn-outline-primary font-weight-bold border rounded"
+                        href="{% url 'account_signup' %}">Sign Up</a>
                 </li>
                 <li class="nav-item m-1">
                     <a class="nav-link nav-link text-white btn-outline-success font-weight-bold border rounded"
@@ -101,7 +109,7 @@
                         Join us on a journey to uncover the planet's hidden treasures and make your own travel dreams a
                         reality.</p>
                     <button type="button"
-                        class="lead btn btn-primary btn-lg border border-white showAboutUsButton">About
+                        class="lead btn btn-warning btn-lg border border-white showAboutUsButton">About
                         Us</button>
                 </div>
                 <div class="col-md-4">
@@ -125,14 +133,14 @@
                         Want to explore our blogs? Click the sign-up button below!
                     </p>
                     <a href="{% url 'account_signup' %}"
-                        class="lead btn btn-warning btn-lg border border-white mb-4">Sign Up</a>
+                        class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
                     <h3>Already have an account?</h3>
                     <p class="lead">
                         Login now and you can interact with our blog posts!
                     </p>
                     <a href="{% url 'account_login' %}"
                         class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
-                        
+
                     {% endif %}
                 </div>
             </div>
