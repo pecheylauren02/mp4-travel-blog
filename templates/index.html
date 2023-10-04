@@ -409,6 +409,7 @@
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').hide();
             $('#blogEntriesSection').show();
+            $('#footerSection').hide();
         });
 
         // Add click event listener to the "Show About Us" button
@@ -417,6 +418,7 @@
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
+            $('#footerSection').hide();
         });
 
         // Add click event listener to the "Show About Us" button
@@ -425,6 +427,7 @@
             $('#carouselExampleControls').show();
             $('#aboutUsSection').hide();
             $('#blogEntriesSection').hide();
+            $('#footerSection').show();
         });
 
         $('.goToAboutUsButton').click(function () {
@@ -432,6 +435,7 @@
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
+            $('#footerSection').hide();
         });
 
         const flipButtons = document.querySelectorAll('.flip-button');
@@ -444,8 +448,5 @@
         });
     });
 </script>
-
-
-
 
 {%endblock%}

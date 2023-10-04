@@ -91,7 +91,7 @@
         {% endblock content %}
     </main>
 
-    <footer class="bg-dark text-white py-4 border-top">
+    <footer id="footerSection" class="bg-dark text-white py-4 border-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 border border-white rounded login-form p-3">
@@ -183,6 +183,20 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 2500);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const showAboutUsButton = document.querySelector('.showAboutUsButton');
+            const exploreBlogsButton = document.querySelector('.exploreBlogsButton');
+            const body = document.body;
+
+            showAboutUsButton.addEventListener('click', function () {
+                body.classList.add('about-us-open');
+            });
+
+            exploreBlogsButton.addEventListener('click', function () {
+                body.classList.add('explore-blogs-open');
+            });
+        });
     </script>
 
 </body>
