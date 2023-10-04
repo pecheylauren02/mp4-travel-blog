@@ -6,8 +6,8 @@ html, body {
     width: 100%;
 }
 
-#footer-blog-form {
-    display: none;
+.footer-bg {
+    background-color: #000000;
 }
 
 /* Sidebar */

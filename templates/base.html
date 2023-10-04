@@ -91,10 +91,10 @@
         {% endblock content %}
     </main>
 
-    <footer id="footerSection" class="bg-dark text-white py-4 border-top">
+    <footer id="footerSection" class="text-white py-4 border-top footer-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 border border-white rounded login-form p-3">
+                <div class="col-md-4">
                     <h3>About Us</h3>
                     <p class="font-italic font-weight-light">Welcome to our travel blog! We're avid explorers sharing
                         captivating tales of global
@@ -106,7 +106,9 @@
                         class="lead btn btn-primary btn-lg border border-white showAboutUsButton">About
                         Us</button>
                 </div>
-
+                <div class="col-md-4">
+                    <img src="{% static 'worldmap.jpeg' %}" alt="An outline of a worldmap" class="img-fluid mx-auto">
+                </div>
                 <div class="col-md-4">
                     {% if user.is_authenticated %}
                     <h3>Explore Our Blogs</h3>
@@ -116,7 +118,7 @@
                         wanderlust. Immerse yourself in rich narratives, turning your travel dreams into reality. Join
                         us in exploring the extraordinary, one blog post at a time.</p>
                     <button type="button"
-                        class="lead btn btn-success btn-lg border border-white exploreBlogsButton mb-2">Explore Our
+                        class="lead btn btn-success btn-lg border border-white exploreBlogsButton">Explore Our
                         Blogs</button>
                     {% else %}
                     <h3>Register Now!</h3>
@@ -133,28 +135,11 @@
                         class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
                     {% endif %}
                 </div>
-                <div class="col-md-4">
-                    <div class="border border-white rounded-lg text-center font-weight-bold p-3 login-form">
-                        <h3 class="text-dark">Contact Us</h3>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
 
-    <div class="text-center p-3 text-white border-top bg-dark">
+    <div class="text-center p-3 text-white border-top footer-bg">
         © 2023 Copyright:
         <a class="text-white" href="https://github.com/pecheylauren02">Made by Lauren Pechey</a>
     </div>
