@@ -14,4 +14,3 @@ class CommentUpdateForm(forms.ModelForm):
         fields = ['body']
         labels = {'body': ''}
         widgets = {'body': forms.Textarea(attrs={'rows': 3})}
-

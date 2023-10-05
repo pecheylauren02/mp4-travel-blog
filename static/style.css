@@ -140,7 +140,7 @@ body {
 /* About Us Section */
 
 #aboutUsSection {
-    background-image: url('/static/red_canoe.png');
+    background-image: url('/drpzab2i2/image/upload/v1/static/red_canoe.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -223,7 +223,7 @@ body {
 /* Login, Sign up, Logout */
 
 .login-bg {
-    background-image: url('/static/people_canoe.png');
+    background-image: url('/drpzab2i2/image/upload/v1/static/people_canoe.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -237,7 +237,7 @@ body {
 }
 
 .signup-bg {
-    background: url('../static/temple_trees.jpg') center/cover no-repeat;
+    background: url('/drpzab2i2/image/upload/v1/static/temple_trees.jpg') center/cover no-repeat;
     height: 600px;
     width: 100%;
     background-color: #f0f0f0;
@@ -247,14 +247,14 @@ body {
 /* Blog Section */
 
 #blogEntriesSection {
-    background-image: url('/static/people_canoe.png');
+    background-image: url('/drpzab2i2/image/upload/v1/static/people_canoe.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .blog-bg {
-    background-image: url('/static/mountain_bg.jpg');
+    background-image: url('/drpzab2i2/image/upload/v1/static/mountain_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
