@@ -3,18 +3,15 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!-- Post Detail Page -->
 <div class="blog-bg home-mg">
     <div class="masthead">
         <div class="container">
             <div class="row">
                 <div
                     class="col-lg-12 col-md-12 col-sm-12 masthead-text border border-white rounded text-center login-form m-3">
-                    <!-- Post title goes in these h1 tags -->
                     <h1 class="display-5 p-3">{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
                     <p class="lead">{{ post.author }} | {{ post.created_on }}</p>
-                    <!-- </div>
-                <div class="col-lg-12 col-md-12 col-sm-12"> -->
                     <!-- The featured image URL goes in the src attribute -->
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
@@ -23,7 +20,6 @@
                     <img src=" {{ post.featured_image.url }}"
                         class="border border-white rounded mb-4 mast-img text-center" width="100%">
                     {% endif %}
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -33,8 +29,6 @@
                 <div
                     class="col-lg-12 col-md-12 col-sm-12 card mb-4 mt-3 left top border border-white rounded-lg bg-info bg-opacity-50 login-form p-3 m-3 text-start">
                     <div class="card-body border border-dark rounded-lg bg-white p-3 font-weight-light mx-auto">
-                        <!-- The post content goes inside the card-text. -->
-                        <!-- Use the | safe filter inside the template tags -->
                         <p class="card-text">
                             {{ post.content | safe }}
                         </p>
@@ -62,7 +56,7 @@
                             <div class="col-1">
                                 {% with comments.count as total_comments %}
                                 <strong class="text-secondary"><i class="far fa-comments"></i>
-                                    <!-- Our total_comments variable goes before the closing strong tag -->
+                                    <!-- The total comments goes before the closing strong tag -->
                                     {{ total_comments }}</strong>
                                 {% endwith %}
                             </div>

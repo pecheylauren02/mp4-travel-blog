@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<!-- Carousel Section-->
 <div id="carouselExampleControls" class="carousel slide carousel-fade home-mg" data-ride="carousel" data-pause="hover">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -144,9 +145,7 @@
 </div>
 
 <!-- About Us Section -->
-<!-- Flip Card -->
-
-
+<!-- Flip Cards -->
 <div id="aboutUsSection" style="display: none;">
     <!-- Initially hidden -->
     <h1 class="impressive-heading">About Us</h1>
@@ -399,14 +398,11 @@
         {% endif %}
     </div>
     <div class="row">
-        <!-- Add the new buttons here -->
         <div class="col-12 mt-3">
             <div class="text-center">
-                <!-- Button to go back to About Us section -->
                 <button
                     class="d-block mx-auto btn-lg btn-warning border border-white rounded goToAboutUsButton m-3">About
                     Us</button>
-                <!-- Button to go back to Carousel section -->
                 <button
                     class="d-block mx-auto btn-lg btn-danger border border-white rounded goToCarouselButton m-3">Return
                     Home</button>
@@ -416,32 +412,26 @@
 
 </div>
 <script>
+    // Event listeners for user navigation
     $(document).ready(function () {
         $('.carousel').carousel({
             interval: 2000
         });
-
-        // Add click event listener to the "Explore our blogs" button
         $('.exploreBlogsButton').click(function () {
-            // Hide the carousel and About Us sections, and show the Blog Entries section
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').hide();
             $('#blogEntriesSection').show();
             $('#footerSection').hide();
         });
 
-        // Add click event listener to the "Show About Us" button
         $('.showAboutUsButton').click(function () {
-            // Show the About Us section and hide the carousel and Blog Entries sections
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
             $('#footerSection').hide();
         });
 
-        // Add click event listener to the "Show About Us" button
         $('.goToCarouselButton').click(function () {
-            // Show the About Us section and hide the carousel and Blog Entries sections
             $('#carouselExampleControls').show();
             $('#aboutUsSection').hide();
             $('#blogEntriesSection').hide();
@@ -449,7 +439,6 @@
         });
 
         $('.goToAboutUsButton').click(function () {
-            // Show the About Us section and hide the carousel and Blog Entries sections
             $('#carouselExampleControls').hide();
             $('#aboutUsSection').show();
             $('#blogEntriesSection').hide();
