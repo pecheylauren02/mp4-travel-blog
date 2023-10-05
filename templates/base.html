@@ -52,9 +52,13 @@
                         href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     <!-- <button class="goToCarouselButton btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">Home</button> -->
                 </li>
-                <li class="nav-item m-1">
-                    <button class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover"
-                        id="about-nav">About Us</button>
+                <!-- <li class="nav-item m-1">
+                    <a href="{% url 'home' %}"
+                        class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover"
+                        id="about-nav">About Us</a>
+
+                     <button class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover"
+                        id="about-nav">About Us</button> -->
                     <!-- <a class="nav-link dropdown-toggle text-white btn-outline-info font-weight-bold border rounded"
                         href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -64,12 +68,12 @@
                         <button class="dropdown-item showAboutUsButton text-white font-weight-bold">Why Use Our Website?</button>
                         <button class="dropdown-item exploreBlogsButton text-white font-weight-bold">Explore Our Blogs</button>
                     </div> -->
-                </li>
+                <!-- </li> 
                 <li class="nav-item m-1">
                     <button class="btn nav-link exploreBlogsButton text-white font-weight-bold border-bottom nav-hover"
                         id="home-nav">Explore
                         Our Blogs</button>
-                </li>
+                </li> -->
                 {% if user.is_authenticated %}
                 <li class="nav-item m-1">
                     <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="logout-nav"
