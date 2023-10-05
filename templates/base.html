@@ -35,11 +35,12 @@
             <span class="brand">
                 <span class="blue-font">whispers</span>
                 <span class="d-sm-inline">of</span>
-                <span class="thin d-inline d-sm-none"><i class="fas fa-shoe-prints"></i></span> <!-- Display only on small screens -->
+                <span class="thin d-inline d-sm-none"><i class="fas fa-shoe-prints"></i></span>
+                <!-- Display only on small screens -->
                 <span class="thin d-none d-sm-inline">|f<i class="fas fa-shoe-prints"></i>tprints</span>
             </span>
         </a>
-        
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,8 +53,8 @@
                     <!-- <button class="goToCarouselButton btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">Home</button> -->
                 </li>
                 <li class="nav-item m-1">
-                    <button
-                        class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover" id="about-nav">About Us</button>
+                    <button class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover"
+                        id="about-nav">About Us</button>
                     <!-- <a class="nav-link dropdown-toggle text-white btn-outline-info font-weight-bold border rounded"
                         href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -65,19 +66,19 @@
                     </div> -->
                 </li>
                 <li class="nav-item m-1">
-                    <button
-                        class="btn nav-link exploreBlogsButton text-white font-weight-bold border-bottom nav-hover" id="home-nav">Explore
+                    <button class="btn nav-link exploreBlogsButton text-white font-weight-bold border-bottom nav-hover"
+                        id="home-nav">Explore
                         Our Blogs</button>
                 </li>
-                    {% if user.is_authenticated %}
+                {% if user.is_authenticated %}
                 <li class="nav-item m-1">
                     <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="logout-nav"
                         href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item m-1">
-                    <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="sign-up-nav"
-                        href="{% url 'account_signup' %}">Sign Up</a>
+                    <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover"
+                        id="sign-up-nav" href="{% url 'account_signup' %}">Sign Up</a>
                 </li>
                 <li class="nav-item m-1">
                     <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="login-nav"
@@ -110,42 +111,46 @@
     <footer id="footerSection" class="text-white py-4 border-top footer-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p class="font-italic font-weight-light">Welcome to our travel blog! We're avid explorers sharing
+                <div class="col-md-4 footer-phone">
+                    <h3 class="text-center">About Us</h3>
+                    <p class="font-weight-light text-justify">Welcome to our travel blog! We're avid explorers sharing
                         captivating tales of global
                         adventures.
                         Dive into our world of wanderlust for travel inspiration, expert tips, and destination insights.
                         Join us on a journey to uncover the planet's hidden treasures and make your own travel dreams a
-                        reality.</p>
-                    <button type="button"
-                        class="lead btn btn-warning btn-lg border border-white showAboutUsButton">About
-                        Us</button>
+                        reality.
+                        If you'd like to know more, click the button below and we'll tell you everything!</p>
+                    <div class="text-center">
+                        <button type="button"
+                            class="lead btn btn-warning btn-lg border border-white showAboutUsButto text-center">About
+                            Us</button>
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 footer-phone" id="footer-img">
                     <img src="{% static 'map.jpeg' %}" alt="An outline of a worldmap" class="img-fluid mx-auto">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 footer-phone">
                     {% if user.is_authenticated %}
-                    <h3>Explore Our Blogs</h3>
-                    <p class="font-weight-light">
+                    <h3 class="text-center">Explore Our Blogs</h3>
+                    <p class="font-weight-light text-justify">
                         Explore our blogs for a captivating journey through global adventures and hidden treasures.
                         Discover expert travel tips, destination insights, and firsthand experiences that inspire
                         wanderlust. Immerse yourself in rich narratives, turning your travel dreams into reality. Join
                         us in exploring the extraordinary, one blog post at a time.</p>
-                    <button type="button"
-                        class="lead btn btn-success btn-lg border border-white exploreBlogsButton">Explore Our
-                        Blogs</button>
-
+                    <div class="text-center">
+                        <button type="button"
+                            class="lead btn btn-success btn-lg border border-white exploreBlogsButton">Explore Our
+                            Blogs</button>
+                    </div>
                     {% else %}
                     <h3>Register Now!</h3>
-                    <p class="lead">
+                    <p class="font-weight-light">
                         Want to explore our blogs? Click the sign-up button below!
                     </p>
                     <a href="{% url 'account_signup' %}"
                         class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
                     <h3>Already have an account?</h3>
-                    <p class="lead">
+                    <p class="font-weight-light">
                         Login now and you can interact with our blog posts!
                     </p>
                     <a href="{% url 'account_login' %}"
@@ -158,8 +163,26 @@
     </footer>
 
     <div class="text-center p-3 text-white border-top footer-bg copyright">
-        © 2023 Copyright:
-        <a class="text-white" href="https://github.com/pecheylauren02" target="_blank">Made by Lauren Pechey</a>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <p>© 2023 Copyright: Made by Lauren Pechey</p>
+        </div>
+        <div class="col-12 text-center d-lg-none">
+            <!-- Facebook -->
+            <a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/"
+                target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+            <!-- Instagram -->
+            <a class="btn btn-primary" style="background-color: #ac2bac;" href="https://www.instagram.com/"
+                target="_blank" role="button"><i class="fab fa-instagram"></i></a>
+            <!-- Linkedin -->
+            <a class="btn btn-primary" style="background-color: #0082ca;" href="https://www.linkedin.com/"
+                target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Youtube -->
+            <a class="btn btn-primary" style="background-color: #ed302f;" href="https://www.youtube.com/"
+                target="_blank" role="button"><i class="fab fa-youtube"></i></a>
+            <!-- Github -->
+            <a class="btn btn-primary" style="background-color: #333333;" href="https://www.github.com/" target="_blank"
+                role="button"><i class="fab fa-github"></i></a>
+        </div>
     </div>
 
     <div class="social-sidebar-left">

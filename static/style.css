@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
@@ -17,12 +18,14 @@ html, body {
 
 .copyright {
     text-decoration: none;
-    transition: transform 0.3s ease-in-out; /* Add smooth transition */
+    transition: transform 0.3s ease-in-out;
+    /* Add smooth transition */
 }
 
 .copyright:hover {
     text-decoration: none;
-    transform: scale(1.1); /* Increase the scale factor as desired */
+    transform: scale(1.1);
+    /* Increase the scale factor as desired */
 }
 
 
@@ -33,7 +36,8 @@ html, body {
 .social-sidebar-left {
     position: fixed;
     top: 50%;
-    left: 0; /* Position to the left */
+    left: 0;
+    /* Position to the left */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -48,12 +52,15 @@ html, body {
     font-size: 24px;
     color: #fff;
     text-decoration: none;
-    transition: all 0.3s ease; /* Add a transition for a smooth effect */
+    transition: all 0.3s ease;
+    /* Add a transition for a smooth effect */
 }
 
 .social-icon:hover {
-    color: white; /* Change the color on hover if desired */
-    transform: scale(1.2); /* Scale the icon size on hover (adjust as needed) */
+    color: white;
+    /* Change the color on hover if desired */
+    transform: scale(1.2);
+    /* Scale the icon size on hover (adjust as needed) */
 }
 
 
@@ -84,30 +91,32 @@ html, body {
 }
 
 .nav-design {
-    background-color: rgba(0, 0, 0, 0.5) !important; 
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .nav-hover:hover {
-    transform: scale(1.1); /* Increase the size on hover */ 
+    transform: scale(1.1);
+    /* Increase the size on hover */
 }
 
 #home-nav:hover {
-    background-color:#17a2b8;
+    background-color: #17a2b8;
 }
 
 #about-nav:hover {
-    background-color:#ffc107;
+    background-color: #ffc107;
 }
 
 #sign-up-nav:hover {
-    background-color:#007bff;
+    background-color: #007bff;
 }
 
 #login-nav:hover {
-    background-color:#28a745;
+    background-color: #28a745;
 }
+
 #logout-nav:hover {
-    background-color:#dc3545;
+    background-color: #dc3545;
 }
 
 
@@ -178,7 +187,7 @@ html, body {
     /* background: url('../static/mountain_bg.jpg') no-repeat center center;
     object-fit: cover; */
     background-color: rgba(35, 187, 187, 0.5) !important;
-} 
+}
 
 /* About Us Heading */
 
@@ -255,10 +264,11 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-        height: 100vh;
-        width: 100vw; /* Added this line to ensure 100% width */
-        background-position: center;
-    }
+    height: 100vh;
+    width: 100vw;
+    /* Added this line to ensure 100% width */
+    background-position: center;
+}
 
 .login-form {
     background-color: rgba(35, 187, 187, 0.8) !important;
@@ -354,7 +364,7 @@ html, body {
 .page-link {
     text-decoration: none;
     color: rgba(35, 187, 187, 0.8);
-} 
+}
 
 /* .post-title {
     margin-top: 20%;
@@ -404,9 +414,18 @@ html, body {
     transform: scale(1.1);
 }
 
-/* Media queries */ 
+/* Media queries */
 
-/* @media (max-width: 991.98px) {
-    .navbar-collapse {
-        max-height: 70vh; /* Adjust this value as needed */
-    
+@media (max-width: 767px) {
+    .footer-phone {
+        margin: 20px;
+    }
+
+    #footer-img {
+        display: none;
+    }
+
+    .social-sidebar-left {
+        display: none;
+    }
+}
