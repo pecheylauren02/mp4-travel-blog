@@ -225,7 +225,7 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
-    font-size: 13px;
+    font-size: 22px;
 }
 
 .card-back {
@@ -460,6 +460,7 @@ body {
     .card-front,
 .card-back {
     padding: 0px;
+    font-size: 13px;
 }
 }
 
