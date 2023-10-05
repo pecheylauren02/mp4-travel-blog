@@ -140,7 +140,7 @@ body {
 /* About Us Section */
 
 #aboutUsSection {
-    background-image: url('/drpzab2i2/image/upload/v1/static/red_canoe.png');
+    background-image: url('/drpzab2i2/image/upload/v1696508905/static/red_canoe.49a35e787f06.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -237,7 +237,7 @@ body {
 }
 
 .signup-bg {
-    background: url('/drpzab2i2/image/upload/v1/static/temple_trees.jpg') center/cover no-repeat;
+    background: url('/drpzab2i2/image/upload/v1696508904/static/temple_trees.ada37a593836.jpg') center/cover no-repeat;
     height: 600px;
     width: 100%;
     background-color: #f0f0f0;
@@ -247,14 +247,14 @@ body {
 /* Blog Section */
 
 #blogEntriesSection {
-    background-image: url('/drpzab2i2/image/upload/v1/static/people_canoe.png');
+    background-image: url('/drpzab2i2/image/upload/v1/static/people_canoe.b4008a84a401.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .blog-bg {
-    background-image: url('/drpzab2i2/image/upload/v1/static/mountain_bg.jpg');
+    background-image: url('/drpzab2i2/image/upload/v1696508900/static/mountain_bg.f465bef1a785.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
