@@ -25,6 +25,8 @@ html, body {
     transform: scale(1.1); /* Increase the scale factor as desired */
 }
 
+
+
 /* Sidebar */
 
 /* Floating social media sidebar on the left */
@@ -84,6 +86,30 @@ html, body {
 .nav-design {
     background-color: rgba(0, 0, 0, 0.5) !important; 
 }
+
+.nav-hover:hover {
+    transform: scale(1.1); /* Increase the size on hover */ 
+}
+
+#home-nav:hover {
+    background-color:#17a2b8;
+}
+
+#about-nav:hover {
+    background-color:#ffc107;
+}
+
+#sign-up-nav:hover {
+    background-color:#007bff;
+}
+
+#login-nav:hover {
+    background-color:#28a745;
+}
+#logout-nav:hover {
+    background-color:#dc3545;
+}
+
 
 /* Carousel section */
 

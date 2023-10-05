@@ -26,10 +26,20 @@
     <!-- Navigation -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-body nav-design fixed-top">
+        <!-- <a class="navbar-brand mr-5" href="{% url 'home' %}">
+            <span class="brand">whis<span class="blue-font d-sm-inline">pers</span>of
+            <span class="thin">|f<i class="fas fa-shoe-prints"></i>tprints</span></span>
+        </a> -->
+
         <a class="navbar-brand mr-5" href="{% url 'home' %}">
-            <span class="brand">whis<span class="blue-font">pers</span>of<span class="thin">|f<i
-                        class="fas fa-shoe-prints"></i>tprints</span></span>
+            <span class="brand">
+                <span class="blue-font">whispers</span>
+                <span class="d-sm-inline">of</span>
+                <span class="thin d-inline d-sm-none"><i class="fas fa-shoe-prints"></i></span> <!-- Display only on small screens -->
+                <span class="thin d-none d-sm-inline">|f<i class="fas fa-shoe-prints"></i>tprints</span>
+            </span>
         </a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,13 +47,13 @@
         <div class="collapse navbar-collapse w-20 w-lg-100" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active m-1">
-                    <!-- <a class="nav-link text-white btn-outline-info font-weight-bold border rounded"
-                        href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a> -->
-                    <button class="goToCarouselButton btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">Home</button>
+                    <a class=" btn nav-link text-white font-weight-bold border-bottom nav-hover" id="home-nav"
+                        href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    <!-- <button class="goToCarouselButton btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">Home</button> -->
                 </li>
                 <li class="nav-item m-1">
                     <button
-                        class="btn nav-link showAboutUsButton text-white btn-outline-info font-weight-bold border rounded">About Us</button>
+                        class="btn nav-link showAboutUsButton text-white font-weight-bold border-bottom nav-hover" id="about-nav">About Us</button>
                     <!-- <a class="nav-link dropdown-toggle text-white btn-outline-info font-weight-bold border rounded"
                         href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -56,21 +66,21 @@
                 </li>
                 <li class="nav-item m-1">
                     <button
-                        class="btn nav-link exploreBlogsButton text-white btn-outline-info font-weight-bold border rounded">Explore
+                        class="btn nav-link exploreBlogsButton text-white font-weight-bold border-bottom nav-hover" id="home-nav">Explore
                         Our Blogs</button>
                 </li>
                     {% if user.is_authenticated %}
                 <li class="nav-item m-1">
-                    <a class="nav-link nav-link text-white btn-outline-danger font-weight-bold border rounded"
+                    <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="logout-nav"
                         href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item m-1">
-                    <a class="nav-link nav-link text-white btn-outline-primary font-weight-bold border rounded"
+                    <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="sign-up-nav"
                         href="{% url 'account_signup' %}">Sign Up</a>
                 </li>
                 <li class="nav-item m-1">
-                    <a class="nav-link nav-link text-white btn-outline-success font-weight-bold border rounded"
+                    <a class="btn nav-link nav-link text-white font-weight-bold border-bottom nav-hover" id="login-nav"
                         href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
