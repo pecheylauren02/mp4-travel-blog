@@ -3,26 +3,26 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="blog-bg">
+<div class="blog-bg home-mg">
     <div class="masthead">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 masthead-text border border-white rounded bg-info bg-opacity-50 text-center p-3 login-form">
-                    <div class="border-white rounded-lg bg-white text-center mt-4">
-                        <!-- Post title goes in these h1 tags -->
-                        <h1 class="display-5 p-3">{{ post.title }}</h1>
-                        <!-- Post author goes before the | the post's created date goes after -->
-                        <p class="lead p-3">{{ post.author }} | {{ post.created_on }}</p>
-                    </div>
-                </div>
-                <div class="d-none d-md-block col-lg-6 col-md-6 col-sm-12 border border-white rounded">
+                <div
+                    class="col-lg-12 col-md-12 col-sm-12 masthead-text border border-white rounded text-center login-form">
+                    <!-- Post title goes in these h1 tags -->
+                    <h1 class="display-5 p-3">{{ post.title }}</h1>
+                    <!-- Post author goes before the | the post's created date goes after -->
+                    <p class="lead">{{ post.author }} | {{ post.created_on }}</p>
+                <!-- </div>
+                <div class="col-lg-12 col-md-12 col-sm-12"> -->
                     <!-- The featured image URL goes in the src attribute -->
                     {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                        class="border border-white rounded mb-4 mast-img text-center" width="100%">
                     {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%">
+                    <img src=" {{ post.featured_image.url }}" class="border border-white rounded mb-4 mast-img text-center" width="100%">
                     {% endif %}
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
         <div class="row d-flex justify-content-center">
             <div
                 class="col-lg-12 col-md-12 col-sm-12 card mb-4 mt-3 left top border border-white rounded-lg bg-info bg-opacity-50 login-form p-5 text-start">
-                <div class="card-body border border-white rounded-lg bg-white lead">
+                <div class="card-body border border-dark rounded-lg bg-white p-3 font-weight-light mx-auto">
                     <!-- The post content goes inside the card-text. -->
                     <!-- Use the | safe filter inside the template tags -->
                     <p class="card-text">

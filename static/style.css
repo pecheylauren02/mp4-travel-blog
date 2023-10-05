@@ -327,7 +327,6 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
     width: 100%;
 }
 
@@ -337,24 +336,11 @@ body {
     position: relative;
 }
 
-.masthead-image {
-    position: relative;
-    overflow: hidden;
+.mast-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
-
-/* .masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: white;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-} */
 
 .post-link {
     text-decoration: none;
