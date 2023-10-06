@@ -223,13 +223,11 @@ body {
 /* Login, Sign up, Logout */
 
 .login-bg {
-    background-image: url('/drpzab2i2/image/upload/v1696508904/static/temple_trees.ada37a593836.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
+    background: url('/drpzab2i2/image/upload/v1696508904/static/temple_trees.ada37a593836.jpg') center/cover no-repeat;
+    height: 600px;
+    width: 100%;
+    background-color: #f0f0f0;
+    object-fit: cover;
 }
 
 .login-form {
