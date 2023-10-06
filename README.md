@@ -515,6 +515,9 @@ For the purposes of this project these implemenation were not within the right s
 * [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
 * [Colormind](http://colormind.io/) - Color Scheme
 
+## Testing
+Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
+
 ## Deployment and Local Developement
 
 Live deployment can be found on this [View Whispers of Footprints live website here](LINK)
