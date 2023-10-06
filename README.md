@@ -285,13 +285,13 @@ The Logo was also created using AI image generator [Craiyon](https://www.craiyon
 
 ### User Journey 
 
-![User Journey]()
+![User Journey](static/user_journey.png)
 
 ### Database Scheme
 
 Entity Relationship Diagram (ERD)
 
-![DataScheme]()
+![DataScheme](static/user_journey.png)
 
 ## Security Features
 
