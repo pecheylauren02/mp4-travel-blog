@@ -67,7 +67,7 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 HTML was tested using the [W3C HTML Validator Testing site](https://validator.w3.org/). No errors emerged. 
 
 <details><summary>HTML Validation Result</summary>
-<img src=""> 
+<img src="static/testing docs/html/html_val.png"> 
 </details>
 
 ### CSS Validation
@@ -132,106 +132,24 @@ All tests were conducted using Code Institute's built-in [PEP8](https://pep8ci.h
 ![urls.py](static/testing docs/pep8/travelblog_urls.png)
 </details>
 
-#### woodland_retreat app
-
-<details>
-<summary> settings.py
-</summary>
-
-![settings.py](documentation/validation/settings-python-validation.PNG)
-</details>
+#### whispersoffootprints App
 
 <details>
 <summary> urls.py
 </summary>
 
-![urls.py](documentation/validation/urls-woodland-python-validation.PNG)
+![urls.py](static/testing docs/pep8/main_urls.png)
 </details>
 
 ## Lighthouse Report
 
-<details>
-<summary> Home Page
-</summary>
-
-![Home Page](documentation/lighthouse_report/home-lighthouse.PNG)
-</details>
+Lighthouse was used to check the performance, SEO, best practices and accessibility. SEO, best practices and accessibility scored high. Performance was high, but for future purposes, images will be resized to improve the score even more. 
 
 <details>
-<summary> Home Page Logged in
+<summary>Lighthouse results
 </summary>
 
-![Home Page Logged in](documentation/lighthouse_report/home-logged-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Contact Page
-</summary>
-
-![Contact Page](documentation/lighthouse_report/contact-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Sign Up Page
-</summary>
-
-![Sign Up Page](documentation/lighthouse_report/sign-up-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Login Page
-</summary>
-
-![Login Page](documentation/lighthouse_report/login-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Logout Page
-</summary>
-
-![Logout Page](documentation/lighthouse_report/logout-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Browse Cabins Page
-</summary>
-
-![Browse Cabins Page](documentation/lighthouse_report/browse-cabins-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Make a Booking Page
-</summary>
-
-![Make a Booking Page](documentation/lighthouse_report/make-a-booking-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Booking Success Page
-</summary>
-
-![Booking Success Page](documentation/lighthouse_report/booking-succesful-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Booking Overview Page
-</summary>
-
-![Booking Overview Page](documentation/lighthouse_report/booking-overview-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Edit Booking Page
-</summary>
-
-![Edit Booking Page](documentation/lighthouse_report/edit-booking-lighthouse.PNG)
-</details>
-
-<details>
-<summary> Delete Booking Page
-</summary>
-
-![Delete Booking Page](documentation/lighthouse_report/delete-booking-lighthouse.PNG)
+![Lighthouse](static/testing docs/html/lighthouse.png)
 </details>
 
 ## Bugs
