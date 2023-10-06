@@ -157,15 +157,15 @@ I used [Figma](https://figma.com/) in the initial design phase, before the codin
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="static/carousel.png">
 
 _Desktop Wireframes_
 
-<img src="">
+<img src="static/ipad_home.png">
 
 _iPad Wireframes_
 
-<img src="">
+<img src="static/phone_home.png">
 
 _Phone Wireframes_
 
