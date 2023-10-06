@@ -207,7 +207,7 @@ Lighthouse was used to check the performance, SEO, best practices and accessibil
 | Blog Detail   |                  |                  |                  |
 |               | Click on like button | Number of likes increases | PASS |
 |               | Add Comment | Comment approval message appears | PASS |
-                | Update Comment | Redirect to Update page, comment updates after submit | PASS |
+|               | Update Comment | Redirect to Update page, comment updates after submit | PASS |
 |               | Delete Comment | Redirect to Delete page, comment deletes after submit | PASS |
 | Admin Panel   |  |    |    |
 |               | CRUD functionality | Working as expected | PASS |
