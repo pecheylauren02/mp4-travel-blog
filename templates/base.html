@@ -117,19 +117,22 @@
                             Blogs</button>
                     </div>
                     {% else %}
-                    <h3>Register Now!</h3>
-                    <p class="font-weight-light">
+                    <h3 class="text-center">Register Now!</h3>
+                    <p class="font-weight-light text-justify">
                         Want to explore our blogs? Click the sign-up button below!
                     </p>
-                    <a href="{% url 'account_signup' %}"
-                        class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
-                    <h3>Already have an account?</h3>
-                    <p class="font-weight-light">
+                    <div class="text-center">
+                        <a href="{% url 'account_signup' %}"
+                            class="lead btn btn-primary btn-lg border border-white mb-4">Sign Up</a>
+                    </div>
+                    <h3 class="text-center">Already have an account?</h3>
+                    <p class="font-weight-light text-justify">
                         Login now and you can interact with our blog posts!
                     </p>
-                    <a href="{% url 'account_login' %}"
-                        class="lead btn btn-success btn-lg border border-white mb-2">Login</a>
-
+                    <div class="text-center">
+                        <a href="{% url 'account_login' %}"
+                            class="lead btn btn-success btn-lg border border-white mb-2 text-center">Login</a>
+                    </div>
                     {% endif %}
                 </div>
             </div>
