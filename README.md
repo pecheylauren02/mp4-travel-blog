@@ -349,21 +349,118 @@ _Logo_
 
 _Social Media Sidebar_
 
+<img src="static/hamburger.png">
+
+_Hamburger menu on small and medium screens_
+
 </details>
 
 #### Navigation Bar
 
+The navigation bar features on every page. When the user has not registered, the navbar shows the signup and login buttons, and once they have logged in successfully, those buttons disappear and display only the logout button. 
+
+<details><summary>Screenshots</summary>
+
+<img src="static/navbar.png">
+
+_Navbar before login_
+
+<img src="static/logout_navbar.png">
+
+_Navbar after login_
+
+</details>
+
 #### About Us Section
 
-#### Sign Up
+The About Us section gives the user information about the blog site, and how they will benefit if they use the site. This page is initially hidden, until the user clicks the "Learn About Us" button. The information is displayed on flipcards, which rotate when the user clicks the "Learn more" button.
 
-#### Login/Logout
+<details><summary>Screenshots</summary>
+
+<img src="static/about_one.png">
+<img src="static/about_two.png">
+
+_About Us Page_
+
+<img src="static/about_back.png">
+<img src="static/about_back_two.png">
+
+_Flipcards with information_
+
+</details>
+
+#### Sign Up, Login & Logout sections
+
+The site has a sign up, login and logout form, all with password validation from django's built-in allauth features. They were all styled similarly for consistency.
+
+<details><summary>Screenshots</summary>
+
+<img src="static/signup.png">
+
+_Sign Up Page_
+
+<img src="static/login.png">
+
+_Login Page_
+
+<img src="static/signout.png">
+
+_Logout Page_
+
+</details>
 
 #### Explore Our Blogs (pagination) section
 
+This section displays a catalogue of blog cards, with the title, author and date written of the blog post. If the user wants to read the blog, they simply have to click on the card and will be taken to the Blog Post Details page. This page was made responsive on all screens, using bootstrap's responsive classes. 
+
+<details><summary>Screenshots</summary>
+
+<img src="static/blog_paginated.png">
+<img src="static/blog_two_paginated.png">
+
+_Paginated Blog Page_
+
+<img src="static/blog_phone_paginated.png">
+
+_Phone view_
+
+</details>
+
 #### Blog Details section
 
+Here, the user can see the blog posts in full, with the Blog Title, image of the trip, and information about the destination they are interested in.
+
+<details><summary>Screenshots</summary>
+
+<img src="static/blog_desktop.png">
+
+_Blog Detail Page_
+
+<img src="static/blog_phone_detail.png">
+
+_Phone View_
+
+</details>
+
 #### Comments, Likes, Update and Delete options
+
+Here CRUD (Create, Read, Update and Delete) was implemented. The user can create a comment, read other people's comments, update their comment and delete their comment. 
+
+<details><summary>Screenshots</summary>
+
+<img src="static/comment_desktop.png">
+
+_Comment Box on Desktop_
+
+<img src="static/comment_box.png">
+
+_Phone View_
+
+<img src="static/likes_comments.png">
+
+_Number of likes and comments_
+
+</details>
 
 #### Admin Features
 
