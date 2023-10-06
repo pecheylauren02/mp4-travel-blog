@@ -464,6 +464,11 @@ _Number of likes and comments_
 
 #### Admin Features
 
+* Django built in admin panel allows admin control over the website.
+* Admin can access admin panel through his navigation bar.
+* Can add, update, delete comments, likes and blog posts.
+* View, Edit and Delete User accounts.
+
 #### Error Pages
 
 ### Future Features
@@ -594,3 +599,25 @@ Heroku needs two additional files to deploy properly
 4. Click 'Open App' to view the deployed live site.
 
 Site is now live
+
+## Credits
+
+### Docs and Code
+
+[Stack Overflow](https://stackoverflow.com/)
+[Code Institute](https://learn.codeinstitute.net/dashboard)
+[Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+[Django docs](https://docs.djangoproject.com/en/4.2/)
+[Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
+[Django and Static Assets](https://docs.djangoproject.com/en/4.2/howto/static-files/)
+[Cloudinary](https://cloudinary.com/)
+
+### Content and Images
+
+All of the content written in the about us sections and home page is imaginary and written by the developer, Lauren Pechey.
+All images were either taken from [Pexels](https://www.pexels.com) or generated with Artificial intelligence (AI) [Craiyon](https://www.craiyon.com/) based on word input and description of the cabins and logo.
+
+## Acknowledgments
+
+* I would like to thank my mentor for support and feedback throughout this project, Rohit Sharma.
+* I would also like to extend my appreciation to the Slack community for their continuous engagement and willingness to share knowledge. The collaborative environment provided a platform for learning, troubleshooting, and gaining inspiration from fellow developers.
