@@ -19,7 +19,7 @@
       {% csrf_token %}
       {{ form.as_p }}
       {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
       {% endif %}
       <button type="submit" class="btn btn-success btn-lg border border-white rounded">{% trans "Login" %} &raquo;</button>
     </form>
