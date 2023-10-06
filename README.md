@@ -322,9 +322,34 @@ Entity Relationship Diagram (ERD)
 
 #### Home Page
 
-#### Logo
+* Displays a navigation bar with a logo, carousel with eye-catching images, buttons to navigate to different sections of the website, social media sidebar icons and a footer with information and a copyright logo. 
 
-#### Footer
+<details><summary>Screenshots</summary>
+
+<img src="static/carousel.png">
+<img src="static/desktop_footer.png">
+
+_Desktop_
+
+<img src="static/ipad_home.png">
+<img src="static/ipad_footer.png">
+
+_iPad_
+
+<img src="static/phone_home.png">
+<img src="static/phone_footer.png">
+
+_Phone_
+
+<img src="static/logo.png">
+
+_Logo_
+
+<img src="static/sidebar.png">
+
+_Social Media Sidebar_
+
+</details>
 
 #### Navigation Bar
 
