@@ -365,11 +365,6 @@ body {
         padding: 10px;
         font-size: 14px;
     }
-
-    /* .carousel-caption {
-        height: 80%;
-    } */
-
     .social-sidebar-left {
         display: none;
     }
@@ -381,11 +376,6 @@ body {
     .footer-phone {
         margin: 20px;
     }
-
-    /* .carousel-inner .custom-img {
-        height: 100vh !important;
-    }  */
-
     #footer-img {
         display: none;
     }
@@ -411,9 +401,4 @@ body {
         padding: 0px;
         font-size: 13px;
     }
-
-    /* .carousel-caption {
-        height: 100%;
-    } */
-
 }
