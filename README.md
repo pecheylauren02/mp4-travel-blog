@@ -108,6 +108,16 @@ Whispers of Footprints was built as a milestone project for my Diploma in Fullst
 - Ensuring that the site is easy-to-navigate between posts
 - Ensuring that the users can easily write about and publish their own blog posts
 
+#### Agile Methodology
+
+Agile Methodology was used to help prioritize and organize tasks, writting the user stories and using Project Boards on Github. Template was created to help write User Stories and define Epics
+
+- Epics were written containing possible user stories and based on that the website was made.
+- User stories were created by looking at epics and through iterations the project was advancing.
+- Project Board is set to public.
+- Project Board was used to track progression of the task through the Todo, In progress and Done columns
+- Labels were added to sort the issues based on the importance.
+
 #### Target Audience
 
 - This travel blog is designed for users of any background or age, but will most likely gain more interest from those interested in travelling, learning more about other countries, or writing about their travels. 
@@ -195,7 +205,7 @@ The Whispers of Footprints website boasts an inviting and visually pleasing desi
 
 #### Wireframes
 
-I used [Balsamiq](https://balsamiq.com/) in the initial design phase, before the coding process. This enabled me to develop the website's structure, skeleton, layout and overall look and style. I created designs for desktop, tablet and mobile screens to ensure that responsiveness was at the forefront of the application from the beginning.
+I used [Figma](https://figma.com/) in the initial design phase, before the coding process. This enabled me to develop the website's structure, skeleton, layout and overall look and style. I created designs for desktop, tablet and mobile screens to ensure that responsiveness was at the forefront of the application from the beginning.
 
 <details><summary>Screenshots</summary>
 
@@ -235,15 +245,15 @@ This site was designed using a mobile-first approach, because after conducting s
 - The welcome page has images of different travel destinations, to encourage the user to continue using the site.
 - I used the same border-radius for all buttons and options to give maintain consistency throughout the site. 
 
-![Color Scheme](LINK)
+![Color Scheme](/static/color_palette.png)
 
 #### Font
 
-My choice of font was [Cormorant Garamond Light and Cormorant Garamond Bold](https://fonts.google.com/specimen/Cormorant+Garamond?query=cor). The light font was used for all paragraphs and and the bold font was used for all headings and buttons. This font choice was imported from [Google Fonts](https://fonts.google.com/) and had a backup font of Serif. I chose this font for my website because the cursive style contributed to the supervillain theme, whilst also providing a professional, legible finish.
+My choice of font was Bootstrap's built-in [Helvetica Neue](https://www.w3schools.com/bootstrap4/bootstrap_typography.asp#:~:text=The%20default%20font%2Dfamily%20is,%2C%20Arial%2C%20sans%2Dserif.). The light font was used for all paragraphs and and the bold font was used for all headings and buttons. I chose this font for my website because it provided a professional, legible finish.
 
 #### Travel Carousel Images
 
-All cabin images were taken from [Pexels](https://www.pexels.com/), and were centered around the theme of travel with different destinations in mind. 
+All images were taken from [Pexels](https://www.pexels.com/), and were centered around the theme of travel with different destinations in mind. 
 
 #### Logo
 
@@ -264,9 +274,14 @@ The Logo was also created using AI image generator [Craiyon](https://www.craiyon
     * Users can comment on any blog post, and like any posts.
     * The User entity has a one-to-many relationship with the commenting entity. This means that a User's comment will be read by many other users, and the user can like and comment on many blogs. 
     * Only Admin can approve or reject comments on blog posts by users. 
-    * Only Admin can change the data in the backend.
     * Users can see the comments once it has been approved by admin.
     * Users can see how many likes are on each blog post.
+    * Users can see how many comments are on each blog post.
+
+4. Comment Update & Delete Models
+
+    * Users can update and delete their comments, only after the admin has approved of their comments. 
+    * The delete model provides validation to the user so their comment does not delete without a warning first. 
 
 ### User Journey 
 
@@ -277,7 +292,6 @@ The Logo was also created using AI image generator [Craiyon](https://www.craiyon
 Entity Relationship Diagram (ERD)
 
 ![DataScheme]()
-
 
 ## Security Features
 
@@ -293,20 +307,50 @@ Entity Relationship Diagram (ERD)
 
 * Django provides built-in protection against Cross-Site Request Forgery (CSRF) attacks. CSRF tokens are generated for each user session, and they are required to submit forms or perform state-changing actions. When a user logs out, the session and associated CSRF token are invalidated, making it difficult for an attacker to forge a valid request using a copied URL.
 
-### Form Validation
-
-* The booking_create view validates form input using the BookingForm class. It checks for various validation errors, such as the number of guests, check-in and check-out dates, overlapping bookings, and additional validations for cave exploration tickets and kayak rentals.
-
 ### Admin approval
 
-* Users cannot comment without approval from the admin site.
+* Users cannot comment without approval from the admin site, preventing users from writing derogatory or offensive comments.
 
 ### Custom error pages
 
 * 404 Error Page, provides user with a button the redirect to home page.
 * 500 Error Page, provides user with a button the redirect to home page.
 
+## Features 
 
+### Existing Features
+
+#### Home Page
+
+#### Logo
+
+#### Footer
+
+#### Navigation Bar
+
+#### About Us Section
+
+#### Sign Up
+
+#### Login/Logout
+
+#### Explore Our Blogs (pagination) section
+
+#### Blog Details section
+
+#### Comments, Likes, Update and Delete options
+
+#### Admin Features
+
+#### Error Pages
+
+### Future Features
+
+* User Reviews: Allow users to leave reviews and ratings for blogs they have read, providing valuable feedback for other users.
+* Advanced Search: Implement an advanced search functionality, enabling users to search for blogs based on specific criteria such as location, title or date.
+* Create your own Blog: Users can write and publish their own blogs, rather than reading published posts by admin. 
+
+For the purposes of this project these implemenation were not within the right scope.
 
 ## Technologies Used
 
