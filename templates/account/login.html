@@ -11,7 +11,7 @@
     <p class="lead">
       {% blocktrans %}
       If you have not created an account yet, then please
-      <a href="{{ signup_url }}" class="lead text-white font-weight-bold">SIGN UP</a> first.
+      <a href="{{ signup_url }}" class="lead text-dark font-weight-bold">SIGN UP</a> first.
       {% endblocktrans %}
     </p>
 
@@ -21,7 +21,7 @@
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
       {% endif %}
-      <button type="submit" class="btn btn-success btn-lg">{% trans "Login" %} &raquo;</button>
+      <button type="submit" class="btn btn-success btn-lg border border-white rounded">{% trans "Login" %} &raquo;</button>
     </form>
   </div>
 </div>
