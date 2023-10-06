@@ -1,5 +1,7 @@
 # Whispers of Footprints
 
+![The Travel Blog](static/carousel.png)
+
 #### By Lauren Pechey
 [Click here to view the live web application](https://whispers-of-footprints-7b4c45535e12.herokuapp.com/)
 
