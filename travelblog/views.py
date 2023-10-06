@@ -37,8 +37,7 @@ class PostDetail(LoginRequiredMixin, View):
                 "comment_form": CommentForm()
             },
         )
-  
- 
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -73,9 +72,9 @@ class PostDetail(LoginRequiredMixin, View):
 
 
 class PostLike(View):
- 
+
     def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug) # instead of slug, but comment ID, also pass user = request.user, if comment is not of the user they will be directed to user page
+        post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
@@ -83,30 +82,24 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-# A new view to update and delete comments
-# Change model, create a view for update
-# When the user clicks update, take the user to a new page which will have a form that is already filled in
-# The get will get the comments form with the body prefilled, and once the user clicks on save, there would need a post function which posts the forms
-# Only by registered and admin user, use login required mixin for classes, and decorator for functions
-# If a user is editting the view, it should be the comment that the user comments
-
-# Update view: 101
-
 
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(View):
     def get(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         form = CommentUpdateForm(instance=comment)
-        return render(request, 'comment_update.html', {'form': form, 'comment': comment})
+        return render(request, 'comment_update.html',
+                      {'form': form, 'comment': comment})
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id, user=request.user)
         form = CommentUpdateForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
-        return render(request, 'comment_update.html', {'form': form, 'comment': comment})
+            return HttpResponseRedirect(reverse('post_detail',
+                                        args=[comment.post.slug]))
+        return render(request, 'comment_update.html',
+                      {'form': form, 'comment': comment})
 
 
 @method_decorator(login_required, name='dispatch')
@@ -120,5 +113,3 @@ class CommentDelete(View):
         post_slug = comment.post.slug
         comment.delete()
         return HttpResponseRedirect(reverse('post_detail', args=[post_slug]))
-
-# test comments, edit and update

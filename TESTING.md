@@ -75,69 +75,61 @@ HTML was tested using the [W3C HTML Validator Testing site](https://validator.w3
 CSS was tested using the [W3C HTML Validator Testing site](https://validator.w3.org/). No errors emerged. 
 
 <details><summary>CSS Validation Result</summary>
-<img src=""> 
+<img src="static/testing docs/css val/css_val.png"> 
 </details>
 
 ### JavaScript Validation
 
-<details>
-<summary> Custom JS (script.js)
-</summary>
-
-![Custom JS (script.js)](documentation/validation/js-validation.PNG)
+<details><summary>CSS Validation Result</summary>
+<img src="static/testing docs/css val/css_val.png"> 
 </details>
 
-<details>
-<summary> Edit Booking Inline Script
-</summary>
+### Python PEP8
 
-![Edit Booking Inline Script](documentation/validation/edit-booking-js-validation.PNG)
-</details>
+#### travelblog App
 
-<details>
-<summary> Make a Booking Inline Script
-</summary>
-
-![Make a Booking Inline Script](documentation/validation/my-booking-js-validation.PNG)
-</details>
-
-### Python
-
-#### cabin_bookings app
+All tests were conducted using Code Institute's built-in [PEP8](https://pep8ci.herokuapp.com/). All tests cleared with no errors. 
 
 <details>
 <summary> admin.py
 </summary>
 
-![admin.py](documentation/validation/admin-python-validation.PNG)
+![admin.py](static/testing docs/pep8/admin_py_file.png)
 </details>
 
 <details>
 <summary> forms.py
 </summary>
 
-![forms.py](documentation/validation/forms-python-validation.PNG)
+![forms.py](static/testing docs/pep8/forms.png)
 </details>
 
 <details>
 <summary> models.py
 </summary>
 
-![models.py](documentation/validation/models-python-validation.PNG)
+![models.py](static/testing docs/pep8/models.png)
 </details>
 
 <details>
 <summary> views.py
 </summary>
 
-![views.py](documentation/validation/views-python-validation.PNG)
+![views.py](static/testing docs/pep8/views.png)
+</details>
+
+<details>
+<summary> apps.py
+</summary>
+
+![apps.py](static/testing docs/pep8/apps.png)
 </details>
 
 <details>
 <summary> urls.py
 </summary>
 
-![urls.py](documentation/validation/urls-python-validation.PNG)
+![urls.py](static/testing docs/pep8/travelblog_urls.png)
 </details>
 
 #### woodland_retreat app
