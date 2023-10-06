@@ -223,7 +223,7 @@ body {
 /* Login, Sign up, Logout */
 
 .login-bg {
-    background: url('/drpzab2i2/image/upload/v1696508904/static/temple_trees.ada37a593836.jpg') center/cover no-repeat;
+    background: url('https://res.cloudinary.com/drpzab2i2/image/upload/v1696508904/static/temple_trees.ada37a593836.jpg') center cover no-repeat;
     height: 600px;
     width: 100%;
     background-color: #f0f0f0;
