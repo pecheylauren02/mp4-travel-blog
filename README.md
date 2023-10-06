@@ -1,11 +1,9 @@
 # Whispers of Footprints
 
-![Whispers of Footprints Mock-up](URL HERE)
-
 #### By Lauren Pechey
-[Click here to view the live web application](LIVE LINK HERE)
+[Click here to view the live web application](https://whispers-of-footprints-7b4c45535e12.herokuapp.com/)
 
-#### HI THERE!
+#### TRAVELLERS!
 
 This is the documentation for a my travel blog website: Whispers of Footprints! It has been built using the Django framework, Bootstrap version 4 for styling, as well as HTML5, CSS3, JavaScript and Python. This project was built as an educational Project as part of Code Institute’s Diploma in Full Stack Software Development, but may be used in future as a genuine travel blog for real-world clients. Please use the table of contents below to navigate through all of the planning, features, deployment, testing and more!
 
